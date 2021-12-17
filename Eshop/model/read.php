@@ -24,8 +24,8 @@
     function TakeAll($table){
         include('connection.php');
         // $query = "SELECT * FROM tshirt";
-        $query = "SELECT * FROM :tab";
-        $query_params = array(':tab'=>$table);
+        $query = "SELECT * FROM :table";
+        $query_params = array(':table'=>$table);
 
         try{
             $stmt = $db->prepare($query);
@@ -33,6 +33,10 @@
         }
 
         catch(PDOException $ex){
+            var_dump($stmt);
+            var_dump($result);
+            var_dump($query);
+            var_dump($query_params);
             die("Failed query : " . $ex);
         }
 
