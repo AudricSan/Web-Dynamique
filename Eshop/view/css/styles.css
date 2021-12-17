@@ -1,0 +1,22 @@
+.image{
+    max-height: 70px;
+    max-width: auto;
+
+    margin-left: 15px;
+}
+
+.prix{
+    margin-left: 5px;
+
+}
+
+.prix::after {
+    content: " €";
+}
+
+.Gallery{
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: 500px;
+}

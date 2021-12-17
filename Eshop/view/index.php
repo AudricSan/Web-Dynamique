@@ -27,8 +27,16 @@
 
     <div class="hoodies">
         <h2> Hoodies </h2>
-        
-        <div class="Gallery"></div>
+
+        <div class="Gallery">
+            <?php
+            $tshirtlist = TakeAllInCat('Hoodies');
+            foreach ($tshirtlist as $key => $value){//var_dump($value);?>
+                <p class='description'><?php echo $value['Tshirt_Description']; ?></p>
+                <p class='prix'><?php echo $value['Tshirt_Prise']; ?></p>
+                <img class='image' src="<?php echo $value['Tshirt_IMG']; ?>">
+            <?php } ?>
+        </div>
     </div>
 
     <div class="T-shirt">
@@ -36,13 +44,12 @@
 
         <div class="Gallery">
             <?php
-            $tshirtlist = TakeAllInCat('Hoodies');
-            foreach ($tshirtlist as $key => $value){
-                var_dump($key);
-                var_dump($value);
-            }
-
-            ?>
+            $tshirtlist = TakeAllInCat('T-shirt');
+            foreach ($tshirtlist as $key => $value){//var_dump($value);?>
+                <p class='description'><?php echo $value['Tshirt_Description']; ?></p>
+                <p class='prix'><?php echo $value['Tshirt_Prise']; ?></p>
+                <img class='image' src="<?php echo $value['Tshirt_IMG']; ?>">
+            <?php } ?>
         </div>
     </div>
 </div>
