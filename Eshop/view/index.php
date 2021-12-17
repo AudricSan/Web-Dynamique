@@ -52,6 +52,20 @@
             <?php } ?>
         </div>
     </div>
+
+    <div>
+        <h2>All here</h2>
+        <div class="Gallery">
+        <?php
+        $tshirtlist = TakeAll('tshirt');
+        foreach ($tshirtlist as $key => $value){//var_dump($value);?>
+            <p class='description'><?php echo $value['Tshirt_Description']; ?></p>
+            <p class='prix'><?php echo $value['Tshirt_Prise']; ?></p>
+            <img class='image' src="<?php echo $value['Tshirt_IMG']; ?>">
+        <?php } ?>
+</div>
+
+    </div>
 </div>
 
 <a href="../controller/coucou.php"> Coucou </a>

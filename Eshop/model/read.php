@@ -23,8 +23,9 @@
 /* Function to Take all data*/
     function TakeAll($table){
         include('connection.php');
-        $query = "SELECT * FROM :table";
-        $query_params = array(':table' => $table);
+        // $query = "SELECT * FROM tshirt";
+        $query = "SELECT * FROM :tab";
+        $query_params = array(':tab' => $table);
 
         try{
             $stmt = $db->prepare($query);
