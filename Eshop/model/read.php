@@ -25,7 +25,7 @@
         include('connection.php');
         // $query = "SELECT * FROM tshirt";
         $query = "SELECT * FROM :tab";
-        $query_params = array(':tab' => $table);
+        $query_params = array(':tab'=>$table);
 
         try{
             $stmt = $db->prepare($query);
