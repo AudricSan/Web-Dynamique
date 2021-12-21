@@ -1,0 +1,18 @@
+Todo:
+  [+] En tant que visiteur , je peux voir la liste descatégories des produits sur la page d'accueil du site
+  [+] En tant que visiteur , je peux sélectionner une catégorie pour obtenir la liste des produits de cette catégorie
+  [+] En tant que visiteur , je peux sélectionner un produit pour obtenir ses détails
+  [] Consulter le P.O pour avoir le catalogue des produits
+  [+] Faire l'analyse de la BD
+  [+] Construire la BD
+  [] Réflechir au design
+  [] Implémenter le design
+  [+] Ecrire la structure de la BD (le MVC) : partie "View"
+  [+] Ecrire la structure de la BD (le MVC) : partie "Model"
+  [+] Ecrire la structure de la BD (le MVC) : partie "Controler"
+  [+] Choix de la technologie à utiliser et apprentissage de Laravel
+  [+] Choix de l'hébergeur et du nom du domaine
+  [-] Coaching de la prise en compte de l'accessibilité (cfr design : partie View)
+  [] Faire la documentation utilisateur
+  [+] Ecrire les mentions légales complètes
+  [+] Veiller au respect des dernières règles en vigueur : Cookies et RGPD

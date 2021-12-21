@@ -1,75 +1,68 @@
 <?php
-    session_start();
-        var_dump($_SESSION);
+session_start();
+var_dump($_SESSION);
 
-    // if($_SESSION['login']){
+// if($_SESSION['login']){
 
-    // } else{
+// } else{
 
-    // }
+// }
 
-    include ('include/head.php');
-    include ('include/nav.php');
+include('../model/function.php');
+include('../model/read.php');
+include('../model/insert.php');
 
+include('include/head.php');
+include('include/nav.php');
 
-    include ('../model/function.php');
-    include ('../model/read.php');
-    include ('../model/insert.php');
+$cat = TakeAllCat();
 ?>
 
 
 <div>
-    <div class="vintage">
-        <h2> Vintage </h2>
-        
-        <div class="Gallery"></div>
-    </div>
+    <?php
 
-    <div class="hoodies">
-        <h2> Hoodies </h2>
+    foreach ($cat as $key => $value) {
+        $value = $value['Type_Name'];
 
-        <div class="Gallery">
-            <?php
-            $tshirtlist = TakeAllInCat('Hoodies');
-            foreach ($tshirtlist as $key => $value){//var_dump($value);?>
-                <p class='description'><?php echo $value['Tshirt_Description']; ?></p>
-                <p class='prix'><?php echo $value['Tshirt_Prise']; ?></p>
-                <img class='image' src="<?php echo $value['Tshirt_IMG']; ?>">
-            <?php } ?>
-        </div>
-    </div>
+        echo "<div id='$value'>";
+        echo "<h2>$value</h2>";
+        echo "<div class='Gallery'>";
 
-    <div class="T-shirt">
-        <h2> T-shirt </h2>
+        $tshirtlist = TakeAllInCat($value);
+        foreach ($tshirtlist as $key => $value) {
+            //var_dump($value);
+            echo "<p class='desc'>" . $value['Tshirt_Description'] . "</p>";
+            echo "<p class='prix'>" . $value['Tshirt_Prise'] . "</p>";
+            echo "<img class='img' src=" . $value['Tshirt_IMG'] . ">";
+        }
+        echo '</div> </div>';
+    }
+    ?>
 
-        <div class="Gallery">
-            <?php
-            $tshirtlist = TakeAllInCat('T-shirt');
-            foreach ($tshirtlist as $key => $value){//var_dump($value);?>
-                <p class='description'><?php echo $value['Tshirt_Description']; ?></p>
-                <p class='prix'><?php echo $value['Tshirt_Prise']; ?></p>
-                <img class='image' src="<?php echo $value['Tshirt_IMG']; ?>">
-            <?php } ?>
-        </div>
-    </div>
+    
+    <?php
+        echo "<div class='all'>";
+        echo "<h2> All </h2> ";        
+        echo "<div class='Gallery'>";
 
-    <div>
-        <h2>All here</h2>
-        <div class="Gallery">
-        <?php
-        $tshirtlist = TakeAll('tshirt');
-        foreach ($tshirtlist as $key => $value){//var_dump($value);?>
-            <p class='description'><?php echo $value['Tshirt_Description']; ?></p>
-            <p class='prix'><?php echo $value['Tshirt_Prise']; ?></p>
-            <img class='image' src="<?php echo $value['Tshirt_IMG']; ?>">
-        <?php } ?>
+        $tshirtList = TakeAll();
+        var_dump($tshirtlist);
+
+        exit;
+
+        foreach ($tshirtlist as $key => $value) {
+            var_dump($value);
+            echo "<p class='desc'>" . $value['Tshirt_Description'] . "</p>";
+            echo "<p class='prix'>" . $value['Tshirt_Prise'] . "</p>";
+            echo "<img class='img' src=" . $value['Tshirt_IMG'] . ">";
+        }
+        echo '</div> </div>';
+        ?>
 </div>
 
-    </div>
-</div>
-
-<a href="../controller/coucou.php"> Coucou </a>
+<a href="../controller/coucou.php" class="coucou"> Coucou </a>
 
 <?php
-    include ('include/footer.php');
+include('include/footer.php');
 ?>

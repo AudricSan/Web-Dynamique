@@ -2,9 +2,15 @@
 
 <footer>
     <div class="footer">
-        <a> CGU </a>
-        <a> Legal </a>
+        <ul>
+            <li><a> CGU </a></li>
+            <li><a href="legal/legal.php"> Legal </a></li>
+        </ul>
+
     </div>
 </footer>
 
-</html>
+<script src="js/reload.js"></script>
+<script src="js/hover.js"></script>
+
+</html>-

@@ -1,4 +1,8 @@
-.image{
+.nav{
+    display: block;
+}
+
+.img{
     max-height: 70px;
     max-width: auto;
 
@@ -19,4 +23,12 @@
     flex-wrap: wrap;
 
     max-width: 500px;
+}
+
+.prix, .desc{
+    display: none;
+}
+
+.visible{
+    display: block;
 }
