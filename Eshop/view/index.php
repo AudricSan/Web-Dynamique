@@ -58,7 +58,7 @@ $cat = TakeAllCat();
             echo "<img class='img' src=" . $value['Tshirt_IMG'] . ">";
         }
         echo '</div> </div>';
-        ?>
+    ?>
 </div>
 
 <a href="../controller/coucou.php" class="coucou"> Coucou </a>
