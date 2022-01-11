@@ -1,4 +1,12 @@
     <?php
+    session_start();
+    var_dump($_SESSION);
+    if(!isset($_SESSION['AdminConnect'])){
+      if($_SESSION['AdminConnect'] != 1){
+        header("Location: ../../model/login.php");
+      }
+    };
+
     $title = "Gestion Teshop";
     include_once('../include/header.php');
     ?>

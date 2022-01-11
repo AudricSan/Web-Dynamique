@@ -1,16 +1,15 @@
 <?php
+session_start();
 require_once('include/header.php');
 ?>
-    
-    
+
     <body>
         <div class="container site">
             <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
             <?php
 				require '../model/database.php';
 			 
-                echo '<nav>
-                        <ul class="nav nav-pills">';
+                echo '<nav> <ul class="nav nav-pills">';
 
                 $db = Database::connect();
                 $statement = $db->query('SELECT * FROM Category');
@@ -23,8 +22,7 @@ require_once('include/header.php');
                         echo '<li role="presentation"><a href="#'. $category['Category_ID'] . '" data-toggle="tab">' . $category['Category_Name'] . '</a></li>';
                 }
 
-                echo    '</ul>
-                      </nav>';
+                echo '</ul> </nav>';
 
                 echo '<div class="tab-content">';
 
@@ -41,9 +39,12 @@ require_once('include/header.php');
                     $statement->execute(array($category['Category_ID']));
                     while ($item = $statement->fetch()) 
                     {
+                        // var_dump($item);
                         echo '<div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src="images/' . $item['Items_IMG'] . '" alt="...">
+                                    <a href="../model/public_view.php?id=' . $item["Items_ID"] . '">
+                                        <img src="images/' . $item['Items_IMG'] . '" alt="' . $item['Items_Description'] . '">
+                                    </a>
                                     <div class="price">' . number_format($item['Items_Price'], 2, '.', ''). ' €</div>
                                     <div class="caption">
                                         <h4>' . $item['Items_Name'] . '</h4>
@@ -52,10 +53,9 @@ require_once('include/header.php');
                                     </div>
                                 </div>
                             </div>';
-                    }
-                   
-                   echo    '</div>
-                        </div>';
+                    }              
+
+                   echo '</div> </div>';
                 }
                 Database::disconnect();
                 echo  '</div>';
