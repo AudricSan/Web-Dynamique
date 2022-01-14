@@ -21,14 +21,14 @@ Todo:
   [] Redirection sur la page d'accueil 
 
 Todo Connection :
-  [] En tant que visiteur, je peux me connecter en indiquant mon email (utilisé comme login) et mon mot de passe S'IDENTIFIER AVANT DE COMMAN... 
-  [] Création d'un formulaire des connexions
-  [] Valider le formulaire
-  [] Vérifier si les données sont dans la DB
-  [] Valider ou refuser la connexion
+  [+] En tant que visiteur, je peux me connecter en indiquant mon email (utilisé comme login) et mon mot de passe S'IDENTIFIER AVANT DE COMMAN... 
+  [+] Création d'un formulaire des connexions
+  [+] Valider le formulaire
+  [+] Vérifier si les données sont dans la DB
+  [+] Valider ou refuser la connexion
   [] Email de confirmation 
   [] Créer une page personnelle pour les membres 
-  [] Vérifier si les données insérées sont correctes
+  [+] Vérifier si les données insérées sont correctes
 
 Todo Use Zone:
   [] En tant que membre, je peux modifier mes informations personnelles S'IDENTIFIER AVANT DE COMMAN... 

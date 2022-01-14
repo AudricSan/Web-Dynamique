@@ -1,9 +1,10 @@
     <?php
     session_start();
     var_dump($_SESSION);
+
     if(!isset($_SESSION['AdminConnect'])){
       if($_SESSION['AdminConnect'] != 1){
-        header("Location: ../../model/login.php");
+        header("Location: ../login.php");
       }
     };
 
@@ -55,7 +56,7 @@
           </table>
         </div>
 
-        <a class="btn btn-primary" href="../index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour Public</a>
+        <a class="btn btn-primary" href="../../controller/Delete Session.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour Public</a>
       </div>
     </body>
 
