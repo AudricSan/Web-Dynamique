@@ -5,7 +5,7 @@ require_once('include/header.php');
 
     <body>
         <div class="container site">
-            <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
+            <h1 class="text-logo">Tshop </h1>
             <?php
 				require '../model/database.php';
 			 
@@ -23,6 +23,14 @@ require_once('include/header.php');
                 }
 
                 echo '</ul> </nav>';
+
+                echo '<nav class="nav2">
+                        <ul>
+                            <li> COUCOU </li>
+                            <li> COUCOU </li>
+                            <li> COUCOU </li>
+                        </ul
+                    </nav>';
 
                 echo '<div class="tab-content">';
 
@@ -62,5 +70,9 @@ require_once('include/header.php');
             ?>
         </div>
     </body>
+
+    <?php
+    require_once('include/footer.php');
+    ?>
 </html>
 

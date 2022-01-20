@@ -35,7 +35,7 @@
                         ');
 
               while ($item = $statement->fetch()) {
-                //var_dump($item);
+                var_dump($item);
                 echo '<tr>';
                 echo '<td>' . $item['Items_Name'] . '</td>';
                 echo '<td>' . $item['Items_Description'] . '</td>';

@@ -3,7 +3,7 @@ session_start();
 var_dump($_SESSION);
 
 $title = "Admin Register";
-include_once('../view/include/header.php');
+include_once('include/header.php');
 
 if(!empty($_SESSION)){
   $error = $_SESSION["Error"];

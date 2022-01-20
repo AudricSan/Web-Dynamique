@@ -81,7 +81,7 @@ if(($_POST['pseudo'] && $_POST['pass'] && $_POST['pass2'] != '')){
 
 
     //END - Redirect
-    $url = 'register.php';
+    $url = '../view/register.php';
     session_unset();
     $_SESSION['Error'] = "NO DATA";
 

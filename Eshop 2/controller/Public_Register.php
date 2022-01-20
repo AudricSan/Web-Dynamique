@@ -3,15 +3,30 @@ session_start();
 require '../model/function.php';
 require '../model/database.php';
 
-if(($_POST['pseudo'] && $_POST['pass'] && $_POST['pass2'] != '')){
+var_dump($_POST);
+
+$username   = $_POST['username'];
+$mail       = $_POST['mail'];
+$name       = $_POST['name'];
+$firstname  = $_POST['firstname'];
+$bday       = $_POST['bday'];
+$pass       = $_POST['pass'];
+$pass2      = $_POST['pass2'];
+
+unset($_POST); //unset Value in post
+
+if(($username && $mail && $name && $firstname && $bday && $pass && $pass2 != '')){
     //Set Variable
         $error = array();
+        var_dump($error);
 
-        $username = $_POST['pseudo'];
-        $password = $_POST['pass'];
-        $confirmpassword = $_POST['pass2'];
-
-        unset($_POST); //unset Value in post
+        var_dump($username);
+        var_dump($mail);
+        var_dump($name);
+        var_dump($firstname);
+        var_dump($bday);
+        var_dump($pass);
+        var_dump($pass2);
     
     //Start Checking
         //Check Username
@@ -24,18 +39,18 @@ if(($_POST['pseudo'] && $_POST['pass'] && $_POST['pass2'] != '')){
         }
 
         //Check Password
-        if(empty($password)){
+        if(empty($pass)){
             $error['password'] = "No password";
         }
 
-        if($password!=$confirmpassword){
+        if($pass!=$pass2){
             $error['password'] ="Not same Password";
 
             goto stoppasscheck;
         }
 
         //check Password Format
-        $error['password'] = checkPassFormat($password);
+        $error['password'] = checkPassFormat($pass);
 
         if(empty($error)){
             stoppasscheck:
@@ -46,14 +61,12 @@ if(($_POST['pseudo'] && $_POST['pass'] && $_POST['pass2'] != '')){
             goto end;
         }
 
+
     //Check Ok
         // Create Data
-        $Admin_Login = $username;
-        $Admin_Password = $password;
-
         $db = Database::connect();
-        $statement = $db->prepare("SELECT Admin_ID INTO admin (Admin_Login = ? )");
-        $statement->execute(array($Admin_Login));
+        $statement = $db->prepare("SELECT User_ID INTO User (User_Login = ? )");
+        $statement->execute(array($username));
         $exist = $statement->fetch();
         Database::disconnect();
 
@@ -64,24 +77,25 @@ if(($_POST['pseudo'] && $_POST['pass'] && $_POST['pass2'] != '')){
             goto end;
         }
 
+        echo 'GO insert';
         //Insert Data
         $db = Database::connect();
-        $statement = $db->prepare("INSERT INTO admin (Admin_Login, Admin_Password) VALUES (?, ?)");
+        $statement = $db->prepare("INSERT INTO user (User_Login, User_Password, User_Name, User_FirstName, User_Bday, User_Mail) VALUES (?, ?, ?, ?, ?, ?)");
 
-        if(isset($Admin_Login, $Admin_Password)){
-            $statement->execute(array($Admin_Login, $Admin_Password));
+        if(isset($username, $pass, $name, $firstname, $bday, $mail)){
+            $statement->execute(array($username, $pass, $name, $firstname, $bday, $mail));
         }
-
-        $admin = $statement->fetch();
+        $user = $statement->fetch();
         Database::disconnect();
-        $url = 'login.php';
+        $url = 'member/index.php';
         goto end;
 }
+
     //END - Redirect
-    $url = 'register.php';
+    $url = '../view/public_register.php';
     session_unset();
     $_SESSION['Error'] = "NO DATA";
 
     end:
-    header("location: ../model/$url");
+    header("location: ../view/$url");
 ?>

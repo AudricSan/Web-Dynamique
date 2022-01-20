@@ -16,7 +16,6 @@ if(($_POST['pseudo'] && $_POST['pass'] != '')){
 
         unset($_POST); //unset Value in post
 
-
     //Check Ok
         // Create Data
         $db = Database::connect();
@@ -78,7 +77,7 @@ if(($_POST['pseudo'] && $_POST['pass'] != '')){
                 $_SESSION['UserConnected'] = 1;
                 $_SESSION['UserID'] = $userInfo['User_ID'];
 
-                $url = 'index.php';
+                $url = 'user/index.php';
                 $error = '';
                 $_SESSION['Error'] = $error;
 
@@ -100,5 +99,10 @@ if(($_POST['pseudo'] && $_POST['pass'] != '')){
     $url = 'login.php';
 
     end:
+
+    // var_dump($_SESSION);
+    // var_dump($error);
+    // var_dump($url);
+    // exit;
     header("location: ../view/$url");
 ?>

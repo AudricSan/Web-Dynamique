@@ -26,15 +26,15 @@ Todo Connection :
   [+] Valider le formulaire
   [+] Vérifier si les données sont dans la DB
   [+] Valider ou refuser la connexion
-  [] Email de confirmation 
-  [] Créer une page personnelle pour les membres 
+  [-] Email de confirmation 
   [+] Vérifier si les données insérées sont correctes
 
 Todo Use Zone:
-  [] En tant que membre, je peux modifier mes informations personnelles S'IDENTIFIER AVANT DE COMMAN... 
-  [] Valider la modification 
+  [+] Créer une page personnelle pour les membres 
+  [] En tant que membre, je peux modifier mes informations personnelle
   [] Modification individuelle pour chaque champ 
+  [] Valider la modification 
 
 Todo Utilities :
-  [] En tant que membre, je peux me déconnecter pour redevenir visiteur S'IDENTIFIER AVANT DE COMMAN... 
-  [] Bouton déconnexion
+  [+] En tant que membre, je peux me déconnecter pour redevenir visiteur
+  [+] Bouton déconnexion
