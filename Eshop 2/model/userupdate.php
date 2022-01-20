@@ -1,6 +1,7 @@
 <?php
 
 require 'database.php';
+require 'function.php';
 session_start();
 $id = $_SESSION['UserID'];
 // var_dump($_SESSION);
@@ -13,7 +14,9 @@ if (!empty($_GET['id'])) {
 
 $error = "";
 $key = $_GET['key'];
-$value = $_GET['value'];
+if(isset($_GET['value'])){
+    $value =  $_GET['value'];
+}
 $type = $_GET['type'];
 
 if (!empty($_POST)) {
@@ -23,7 +26,7 @@ if (!empty($_POST)) {
     // var_dump($_GET);
 
     if($key == 'Password'){
-        $oldpass = $_POST['oldpass'];
+        $value = $_POST['oldpass'];
         $newpass = $_POST['newpass'];
         $newpass2 = $_POST['newpass2'];
 
@@ -52,6 +55,44 @@ if (!empty($_POST)) {
     
             case 'Password':
                 echo 'PASSWORD';
+                $statement = $db->prepare('SELECT User_Password FROM user WHERE User_ID = ?');
+                $statement->execute(array($id));
+                $oldpassDB = $statement->fetch();
+                $oldpassDB = $oldpassDB[0];
+
+                // var_dump($oldpassDB);
+                // var_dump($value);
+                
+                if($oldpassDB = $value){
+                    // echo 'OLD OK';
+                    
+                    if($newpass == $newpass2){
+                        // echo 'SAME NEWPASS';
+
+                        $errorformat = checkPassFormat($newpass);
+
+                        if(empty($errorformat)){
+                            // echo 'PASS OKAY';
+
+                            $statement = $db->prepare("UPDATE user set User_Password = ? WHERE User_ID = ?");
+                            $statement->execute(array($newpass, $id));
+                            $error = '';
+                            break;
+
+                        }else{
+                            $error = implode("",$errorformat);
+
+                        }
+
+                    }else{
+                        $error = "NOS SAME PASSWORD";
+                        break;
+                    }
+
+                }else{
+                    $error = 'NOT GOOD OLD PASSWORD';
+                    break;
+                }
                 break;
     
             case 'Name':
