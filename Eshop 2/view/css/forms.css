@@ -27,7 +27,6 @@ h2 {
 }
 
 .form-group label{
-
     padding : 0;
     padding-bottom: 0.2em;
     padding-top: 1em;
@@ -40,19 +39,35 @@ h2 {
     flex-direction: column;
 }
 
-.form-group .a{
-    display: flex;
-    justify-content: center;
-    background: #f2f700;
-    border-color: #00a2ff;
+.form-group a{
     color: #00a2ff;
-    padding: 0.8em;
-    margin: 2em;
+    margin-right: 1em;
 }
 
 .form .back{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
 }
 
+.form .form-button{
+    background: none;
+    color: #00a2ff;
+    margin: 0;
+    padding: 0;
+    margin-left: 1em;
+}
+
+.form .btn{
+    margin: 0;
+}
+
+.back a{
+    color: #fff;
+}
+
+.backback{
+    color: #00a2ff !important;
+}

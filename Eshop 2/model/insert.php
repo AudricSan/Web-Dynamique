@@ -95,50 +95,41 @@
     
     <body>
         <h1 class="text-logo"> T-Shop </h1>
-         <div class="container insert">
-            <div class="row">
-                <h1><strong>Ajouter un item</strong></h1>
-                <br>
+         <div class="container form">
+            <h2><strong>Ajouter un item</strong></h2>
+            <br>
+
+            <div class="form-group">
                 <form class="form" action="insert.php" role="form" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="name">Nom:</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom" value="<?php echo $name;?>">
-                        <span class="help-inline"><?php echo $nameError;?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description:</label>
-                        <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $description;?>">
-                        <span class="help-inline"><?php echo $descriptionError;?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="price">Prix: (en €)</label>
-                        <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Prix" value="<?php echo $price;?>">
-                        <span class="help-inline"><?php echo $priceError;?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="category">Catégorie:</label>
-                        <select class="form-control" id="category" name="category">
-                        <?php
-                           $db = Database::connect();
-                           foreach ($db->query('SELECT * FROM category') as $row) 
-                           {
-                                echo '<option value="'. $row['Category_ID'] .'">'. $row['Category_Name'] . '</option>';;
-                           }
-                           Database::disconnect();
-                        ?>
-                        </select>
-                        <span class="help-inline"><?php echo $categoryError;?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Sélectionner une image:</label>
-                        <input type="file" id="image" name="image"> 
-                        <span class="help-inline"><?php echo $imageError;?></span>
-                    </div>
+                    <label for="name">Nom:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nom" value="<?php echo $name;?>">
+                    <span class="help-inline"><?php echo $nameError;?></span>
+
+                    <label for="description">Description:</label>
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $description;?>">
+                    <span class="help-inline"><?php echo $descriptionError;?></span>
+
+                    <label for="price">Prix: (en €)</label>
+                    <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Prix" value="<?php echo $price;?>">
+                    <span class="help-inline"><?php echo $priceError;?></span>
+
+                    <label for="category">Catégorie:</label>
+                    <select class="form-control" id="category" name="category">
+                        <?php $db = Database::connect(); foreach ($db->query('SELECT * FROM category') as $row) { echo '<option value="'. $row['Category_ID'] .'">'. $row['Category_Name'] . '</option>'; } Database::disconnect(); ?>
+                    </select>
+                
+                    <span class="help-inline"><?php echo $categoryError;?></span>
+
+                    <label for="image">Sélectionner une image:</label>
+                    <input type="file" id="image" name="image"> 
+                    <span class="help-inline"><?php echo $imageError;?></span>
+
                     <br>
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
+
+                    <div class="back">
                         <a class="btn btn-primary" href="../view/admin/index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
-                   </div>
+                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
+                    </div>
                 </form>
             </div>
         </div>   

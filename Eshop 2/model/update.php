@@ -73,7 +73,6 @@ if (!empty($_POST)) {
         }
         Database::disconnect();
         header("Location: ../view/admin/index.php");
-
     } else if ($isImageUpdated && !$isUploadSuccess) {
         $db = Database::connect();
         $statement = $db->prepare("SELECT * FROM items where Items_ID = ?");
@@ -114,69 +113,71 @@ require_once('../view/include/header.php');
 <body>
     <h1 class="text-logo"> T-Shop </h1>
     <div class="container edit">
+        <h1><strong>Modifier un item</strong></h1>
+        <br>
+
         <div class="row">
-            <div class="col-sm-6">
-                <h1><strong>Modifier un item</strong></h1>
+            <form class="form" action="<?php echo 'update.php?id=' . $id; ?>" role="form" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Nom:
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom" value="<?php echo $name; ?>">
+                        <span class="help-inline"><?php echo $nameError; ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description:
+                        <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $description; ?>">
+                        <span class="help-inline"><?php echo $descriptionError; ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Prix: (en €)
+                        <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Prix" value="<?php echo $price; ?>">
+                        <span class="help-inline"><?php echo $priceError; ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Catégorie:
+                        <select class="form-control" id="category" name="category">
+                            <?php
+                            $db = Database::connect();
+                            foreach ($db->query('SELECT * FROM category') as $row) {
+                                if ($row['Category_ID'] == $category)
+                                    echo '<option selected="selected" value="' . $row['Category_ID'] . '">' . $row['Category_Name'] . '</option>';
+                                else
+                                    echo '<option value="' . $row['Category_ID'] . '">' . $row['Category_Name'] . '</option>';;
+                            }
+                            Database::disconnect();
+                            ?>
+                        </select>
+                        <span class="help-inline"><?php echo $categoryError; ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <p><?php echo $image; ?></p>
+                    <label for="image">Sélectionner une nouvelle image:</label>
+                    <input type="file" id="image" name="image">
+                    <span class="help-inline"><?php echo $imageError; ?></span>
+                </div>
+
                 <br>
-                <form class="form" action="<?php echo 'update.php?id=' . $id; ?>" role="form" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="name">Nom:
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Nom" value="<?php echo $name; ?>">
-                            <span class="help-inline"><?php echo $nameError; ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description:
-                            <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $description; ?>">
-                            <span class="help-inline"><?php echo $descriptionError; ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="price">Prix: (en €)
-                            <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Prix" value="<?php echo $price; ?>">
-                            <span class="help-inline"><?php echo $priceError; ?></span>
-                    </div>
+            </form>
 
-
-                    <div class="form-group">
-                        <label for="category">Catégorie:
-                            <select class="form-control" id="category" name="category">
-                                <?php
-                                $db = Database::connect();
-                                foreach ($db->query('SELECT * FROM category') as $row) {
-                                    if ($row['Category_ID'] == $category)
-                                        echo '<option selected="selected" value="' . $row['Category_ID'] . '">' . $row['Category_Name'] . '</option>';
-                                    else
-                                        echo '<option value="' . $row['Category_ID'] . '">' . $row['Category_Name'] . '</option>';;
-                                }
-                                Database::disconnect();
-                                ?>
-                            </select>
-                            <span class="help-inline"><?php echo $categoryError; ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Image:</label>
-                        <p><?php echo $image; ?></p>
-                        <label for="image">Sélectionner une nouvelle image:</label>
-                        <input type="file" id="image" name="image">
-                        <span class="help-inline"><?php echo $imageError; ?></span>
-                    </div>
-                    <br>
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-                        <a class="btn btn-primary" href="../view/admin/index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
-                    </div>
-                </form>
-            </div>
-            <div class="col-sm-6 site">
-                <div class="thumbnail">
-                    <img src="<?php echo '../view/images/' . $image; ?>" alt="...">
-                    <div class="price"><?php echo number_format((float)$price, 2, '.', '') . ' €'; ?></div>
-                    <div class="caption">
-                        <h4><?php echo $name; ?></h4>
-                        <p><?php echo $description; ?></p>
-                        <a href="#" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a>
-                    </div>
+            <div class="thumbnail">
+                <img src="<?php echo '../view/images/' . $image; ?>" alt="...">
+                <div class="price"><?php echo number_format((float)$price, 2, '.', '') . ' €'; ?></div>
+                <div class="caption">
+                    <h4><?php echo $name; ?></h4>
+                    <p><?php echo $description; ?></p>
+                    <a href="#" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a>
                 </div>
             </div>
+        </div>
+
+        <div class="btnedit">
+            <a class="btn btn-primary" href="../view/admin/index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
         </div>
     </div>
 </body>
