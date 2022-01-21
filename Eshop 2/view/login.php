@@ -9,7 +9,7 @@ include_once('../view/include/header.php');
 
 <body>
   <h1 class="text-logo">T-Shop</h1>
-  <div class="container site">
+  <div class="container form">
   <h2> Connection</h2>
   <form action="../controller/login.php" method="post">
       <div class="form-group">
@@ -18,8 +18,11 @@ include_once('../view/include/header.php');
 
           <label for="pass">password</label>
           <input type="password" name="pass" require>
+
+          <button type="submit" class="form-button"> Submit </button>
+          <a href="index.php"> Retour </a>
+
       </div>
-      <button type="submit" class="form-button"> Submit </button>
   </form>
   </div>
 </body>

@@ -1,10 +1,9 @@
 <footer>
-    <a href="" > LINK </a>
+    <?php
+    echo "<a href='$root/view/mention.php' > Mention Legale </a>";
+    ?>
+
     <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate deleniti voluptatum sequi numquam! Perspiciatis asperiores rerum magni soluta corporis atque officiis assumenda earum laborum! Maiores ducimus deleniti natus nostrum aliquid.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate deleniti voluptatum sequi numquam! Perspiciatis asperiores rerum magni soluta corporis atque officiis assumenda earum laborum! Maiores ducimus deleniti natus nostrum aliquid.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate deleniti voluptatum sequi numquam! Perspiciatis asperiores rerum magni soluta corporis atque officiis assumenda earum laborum! Maiores ducimus deleniti natus nostrum aliquid.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate deleniti voluptatum sequi numquam! Perspiciatis asperiores rerum magni soluta corporis atque officiis assumenda earum laborum! Maiores ducimus deleniti natus nostrum aliquid.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate deleniti voluptatum sequi numquam! Perspiciatis asperiores rerum magni soluta corporis atque officiis assumenda earum laborum! Maiores ducimus deleniti natus nostrum aliquid.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate cumque suscipit est unde qui autem natus ipsum assumenda pariatur eveniet fugit cum repellat aperiam et ipsa magni, odio ut reiciendis.
     </div>
 </footer>

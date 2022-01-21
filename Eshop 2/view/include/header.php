@@ -1,8 +1,15 @@
 <?php
-    $root = $_SERVER['DOCUMENT_ROOT'] . '/Eshop 2/view/css/styles.css';
-    $root = '../../../../Eshop%202/view/css/styles.css';
+    $root = 'http://127.0.0.230/Eshop%202/';
+    $cssStyle = $root . 'view/css/styles.css';
+    $cssForms = $root . 'view/css/forms.css';
+    $cssAdmin = $root . 'view/css/admin.css';
+    $cssUser = $root . 'view/css/user.css';
+    $cssView = $root . 'view/css/view.css';
+    $cssEdit = $root . 'view/css/edit.css';
+    $cssDelete = $root . 'view/css/delete.css';
     // $root = urlencode($root);
-    //var_dump($root);
+    // var_dump($root);
+    // var_dump($_SERVER);
 
     if(!isset($title)){
         $title = "COUCOU";
@@ -19,7 +26,13 @@ echo "
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
         <link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
-        <link rel='stylesheet' href='$root'>
+        <link rel='stylesheet' href='$cssStyle'>
+        <link rel='stylesheet' href='$cssForms'>
+        <link rel='stylesheet' href='$cssAdmin'>
+        <link rel='stylesheet' href='$cssUser'>
+        <link rel='stylesheet' href='$cssView'>
+        <link rel='stylesheet' href='$cssEdit'>
+        <link rel='stylesheet' href='$cssDelete'>
     </head>
 ";
 

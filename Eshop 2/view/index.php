@@ -1,15 +1,16 @@
 <?php
 session_start();
 require_once('include/header.php');
+// var_dump($_SESSION);
 ?>
 
     <body>
         <div class="container site">
-            <h1 class="text-logo">Tshop </h1>
+            <h1 class="text-logo">T-Shop </h1>
             <?php
 				require '../model/database.php';
 			 
-                echo '<nav> <ul class="nav nav-pills">';
+                echo '<div class="navlog divNav"> <nav> <ul>';
 
                 $db = Database::connect();
                 $statement = $db->query('SELECT * FROM Category');
@@ -24,13 +25,24 @@ require_once('include/header.php');
 
                 echo '</ul> </nav>';
 
-                echo '<nav class="nav2">
-                        <ul>
-                            <li> COUCOU </li>
-                            <li> COUCOU </li>
-                            <li> COUCOU </li>
-                        </ul
-                    </nav>';
+                echo '<nav> <ul>';
+
+                if(isset($_SESSION['UserConnected'])){
+                    echo '<li> <a href="user/index.php" role="button"><span class="glyphicon glyphicon-list-alt"></span> Mon profil</a> </li>';
+                  }
+
+                elseif(isset($_SESSION['AdminConnect'])) {
+                    echo '<li> <a href="admin/index.php" role="button"><span class="glyphicon glyphicon-list-alt"></span> Gestion Admin</a> </li>';
+                  }
+
+                else{
+                    echo '<li> <a href="login.php" role="button"><span class="glyphicon glyphicon-off"></span> Login</a> </li>
+                          <li> <a href="Public_Register.php" role="button"><span class="glyphicon glyphicon-list-alt"></span> S\'inscrire</a> </li>';
+                  }
+
+                echo '<li> <a href="" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a> </li>'; 
+                
+                echo '</ul> </nav> </div>';
 
                 echo '<div class="tab-content">';
 
@@ -75,4 +87,3 @@ require_once('include/header.php');
     require_once('include/footer.php');
     ?>
 </html>
-

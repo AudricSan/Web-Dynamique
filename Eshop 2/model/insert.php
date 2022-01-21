@@ -94,8 +94,8 @@
 ?>
     
     <body>
-        <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
-         <div class="container admin">
+        <h1 class="text-logo"> T-Shop </h1>
+         <div class="container insert">
             <div class="row">
                 <h1><strong>Ajouter un item</strong></h1>
                 <br>

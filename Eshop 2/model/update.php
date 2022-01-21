@@ -112,8 +112,8 @@ require_once('../view/include/header.php');
 ?>
 
 <body>
-    <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
-    <div class="container admin">
+    <h1 class="text-logo"> T-Shop </h1>
+    <div class="container edit">
         <div class="row">
             <div class="col-sm-6">
                 <h1><strong>Modifier un item</strong></h1>
@@ -168,7 +168,7 @@ require_once('../view/include/header.php');
             </div>
             <div class="col-sm-6 site">
                 <div class="thumbnail">
-                    <img src="<?php echo '../images/' . $image; ?>" alt="...">
+                    <img src="<?php echo '../view/images/' . $image; ?>" alt="...">
                     <div class="price"><?php echo number_format((float)$price, 2, '.', '') . ' €'; ?></div>
                     <div class="caption">
                         <h4><?php echo $name; ?></h4>

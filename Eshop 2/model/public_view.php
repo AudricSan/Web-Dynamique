@@ -25,8 +25,8 @@ require_once('../view/include/header.php');
 ?>
 
     <body>
-        <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
-         <div class="container admin">
+        <h1 class="text-logo"> T-Shop </h1>
+         <div class="container view">
             <div class="row">
                <div class="col-sm-6">
                     <h1><strong>Voir un item</strong></h1>

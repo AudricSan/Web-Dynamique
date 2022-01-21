@@ -68,7 +68,7 @@ if(($_POST['pseudo'] && $_POST['pass'] && $_POST['pass2'] != '')){
         $db = Database::connect();
         $statement = $db->prepare("INSERT INTO admin (Admin_Login, Admin_Password) VALUES (?, ?)");
 
-        if(isset($Admin_Login, $Admin_Password)){
+        if(isset($Admin_Login) && isset($Admin_Password)){
             $statement->execute(array($Admin_Login, $Admin_Password));
         }
 

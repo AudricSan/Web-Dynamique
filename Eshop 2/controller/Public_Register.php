@@ -82,7 +82,7 @@ if(($username && $mail && $name && $firstname && $bday && $pass && $pass2 != '')
         $db = Database::connect();
         $statement = $db->prepare("INSERT INTO user (User_Login, User_Password, User_Name, User_FirstName, User_Bday, User_Mail) VALUES (?, ?, ?, ?, ?, ?)");
 
-        if(isset($username, $pass, $name, $firstname, $bday, $mail)){
+        if(isset($username) && isset($pass) && isset($name) && isset($firstname) && isset($bday) && isset($mail)){
             $statement->execute(array($username, $pass, $name, $firstname, $bday, $mail));
         }
         $user = $statement->fetch();

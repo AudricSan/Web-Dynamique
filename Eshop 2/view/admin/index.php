@@ -8,12 +8,12 @@
       }
     };
 
-    $title = "Gestion Teshop";
+    $title = "Gestion T-Shop";
     include_once('../include/header.php');
     ?>
 
     <body>
-      <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
+      <h1 class="text-logo"> T-Shop </h1>
       <div class="container admin">
         <div class="row">
           <h1><strong>Liste des items </strong><a href="../../model/insert.php" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Ajouter</a></h1>
@@ -35,18 +35,18 @@
                         ');
 
               while ($item = $statement->fetch()) {
-                var_dump($item);
+                // var_dump($item);
                 echo '<tr>';
                 echo '<td>' . $item['Items_Name'] . '</td>';
                 echo '<td>' . $item['Items_Description'] . '</td>';
                 echo '<td>' . number_format($item['Items_Price'], 2, '.', '') . '</td>';
                 echo '<td>' . $item['Items_Category'] . '</td>';
-                echo '<td width=300>';
-                echo '<a class="btn btn-default" href="../../model/view.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-eye-open"></span> Voir</a>';
+                echo '<td class=action with=500>';
+                echo '<a class="btn btn-default" href="../../model/view.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-eye-open"></span> See</a>';
                 echo ' ';
-                echo '<a class="btn btn-primary" href="../../model/update.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-pencil"></span> Modifier</a>';
+                echo '<a class="btn btn-primary" href="../../model/update.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-pencil"></span> Edit</a>';
                 echo ' ';
-                echo '<a class="btn btn-danger" href="../../model/delete.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-remove"></span> Supprimer</a>';
+                echo '<a class="btn btn-danger" href="../../model/delete.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-remove"></span> Delete</a>';
                 echo '</td>';
                 echo '</tr>';
               }
@@ -56,7 +56,11 @@
           </table>
         </div>
 
-        <a class="btn btn-primary" href="../../controller/Delete Session.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour Public</a>
+        <div class="back">
+        <a class="btn btn-primary" href="../index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour Public</a>
+        <a class="btn btn-primary" href="../register.php"><span class="glyphicon glyphicon-arrow-left"></span> Add Administrator</a>
+        <a class="btn btn-danger" href="../../controller/Delete Session.php"><span class="glyphicon glyphicon-remove"></span> Deconnection</a>
+        </div>
       </div>
     </body>
 

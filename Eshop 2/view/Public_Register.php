@@ -5,13 +5,17 @@ var_dump($_SESSION);
 $title = "Public Register";
 include_once('include/header.php');
 
+if(isset($_SESSION['Error'])){
 $error = $_SESSION["Error"];
+}else{
+  $error="";
+}
 var_dump($error);
 ?>
 
 <body>
-  <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
-  <div class="container site">
+  <h1 class="text-logo"> T-Shop </h1>
+  <div class="container form">
   <h2> Connection</h2>
   <form action="../controller/Public_Register.php" method="post">
       <div class="form-group">
@@ -42,10 +46,10 @@ var_dump($error);
           <label for="pass2">Confirm password</label>
           <input type="password" name="pass2" require>
 
+          <button type="submit" class="form-button"> Submit </button>
+          <a href="index.php"> Retour </a>
       </div>
-
-      <button type="submit" class="form-button"> Submit </button>
-  </form>
+    </form>
   </div>
 </body>
 </html>

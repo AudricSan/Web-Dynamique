@@ -12,8 +12,8 @@ if(!empty($_SESSION)){
 ?>
 
 <body>
-  <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
-  <div class="container site">
+  <h1 class="text-logo"> T-Shop </h1>
+  <div class="container form">
   <h2> Connection</h2>
   <form action="../controller/register.php" method="post">
       <div class="form-group">
@@ -29,9 +29,11 @@ if(!empty($_SESSION)){
 
           <span><?php if(isset($error['password'])){if(is_array($error['password'])){foreach($error["password"] as $error){echo $error; }}else{echo $error['password'];}}?></span>         
 
-      </div>
+          <button type="submit" class="form-button"> Submit </button>
+          <a href="admin/index.php"> Retour </a>
 
-      <button type="submit" class="form-button"> Submit </button>
+        </div>
+
   </form>
   </div>
 </body>

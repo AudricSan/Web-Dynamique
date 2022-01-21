@@ -29,8 +29,8 @@
 ?>
     
     <body>
-        <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
-         <div class="container admin">
+        <h1 class="text-logo"> T-Shop </h1>
+         <div class="container delete">
             <div class="row">
                 <h1><strong>Supprimer un item</strong></h1>
                 <br>

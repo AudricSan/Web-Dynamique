@@ -18,7 +18,7 @@ Todo Sprint 1:
   [] Veiller au respect des dernières règles en vigueur : Cookies et RGPD
 
 Todo:
-  [] Redirection sur la page d'accueil 
+  [+] Redirection sur la page d'accueil 
 
 Todo Connection :
   [+] En tant que visiteur, je peux me connecter en indiquant mon email (utilisé comme login) et mon mot de passe S'IDENTIFIER AVANT DE COMMAN... 
@@ -31,9 +31,9 @@ Todo Connection :
 
 Todo Use Zone:
   [+] Créer une page personnelle pour les membres 
-  [] En tant que membre, je peux modifier mes informations personnelle
-  [] Modification individuelle pour chaque champ 
-  [] Valider la modification 
+  [+] En tant que membre, je peux modifier mes informations personnelle
+  [+] Modification individuelle pour chaque champ 
+  [+] Valider la modification 
 
 Todo Utilities :
   [+] En tant que membre, je peux me déconnecter pour redevenir visiteur

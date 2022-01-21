@@ -23,13 +23,14 @@
     if($user == false){
       header("Location: ../login.php");
     }
-    $title = "Gestion Teshop";
+
+    $title = "Gestion T-Shop";
     include_once('../include/header.php');
     ?>
 
     <body>
-      <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Teshop <span class="glyphicon glyphicon-cutlery"></span></h1>
-      <div class="container admin">
+      <h1 class="text-logo"> T-Shop </h1>
+      <div class="container user">
         <div class="row">
           <h1><strong><?php echo $user['User_Name']; ?> information </strong></h1>
           <table class="table table-striped table-bordered">
@@ -99,9 +100,10 @@
           </table>
         </div>
 
-
+        <div class="back">
         <a class="btn btn-primary" href="../index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour Public</a>
-        <a class="btn btn-primary" href="../../controller/Delete Session.php"><span class="glyphicon glyphicon-arrow-left"></span> Deconnection</a>
+        <a class="btn btn-danger" href="../../controller/Delete Session.php"><span class="glyphicon glyphicon-remove"></span> Deconnection</a>
+        </div>
       </div>
     </body>
 

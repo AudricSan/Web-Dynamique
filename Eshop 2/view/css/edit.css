@@ -1,0 +1,33 @@
+.edit{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+}
+
+.edit .row{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.edit .form-actions{
+    width: 100%;
+    margin-bottom: 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.edit .thumbnail{
+    margin-right: 0em;
+    margin-left: 2em;
+}
+
+.edit .btn{
+    margin: 0;
+}
