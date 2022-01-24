@@ -47,8 +47,8 @@ var_dump($error);
           <input type="password" name="pass2" require>
 
           <div class="back">
-            <button type="submit" class="form-button"> Submit </button>
             <a href="index.php"> Retour </a>
+            <button type="submit" class="form-button"> Submit </button>
         </div>
       </div>
     </form>

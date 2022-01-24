@@ -2,11 +2,11 @@ Todo Sprint 1:
   [+] En tant que visiteur , je peux voir la liste descatégories des produits sur la page d'accueil du site
   [+] En tant que visiteur , je peux sélectionner une catégorie pour obtenir la liste des produits de cette catégorie
   [+] En tant que visiteur , je peux sélectionner un produit pour obtenir ses détails
-  [] Consulter le P.O pour avoir le catalogue des produits
+  [+] Consulter le P.O pour avoir le catalogue des produits
   [+] Faire l'analyse de la BD
   [+] Construire la BD
   [+] Réflechir au design
-  [] Implémenter le design
+  [+] Implémenter le design
   [+] Ecrire la structure de la BD (le MVC) : partie "View"
   [+] Ecrire la structure de la BD (le MVC) : partie "Model"
   [+] Ecrire la structure de la BD (le MVC) : partie "Controler"
@@ -38,3 +38,18 @@ Todo Use Zone:
 Todo Utilities :
   [+] En tant que membre, je peux me déconnecter pour redevenir visiteur
   [+] Bouton déconnexion
+
+Todo Sprint 2 :
+  [ ] En tant que visiteur, je peux afficher le contenu de mon panier d'achats
+  [ ] En tant que visiteur, je peux modifier des produits dans mon panier
+  [ ] En tant que gestionnaire, je peux mettre à jour les produits
+  [] En tant que gestionnaire, je peux optimiser le referencement
+
+Todo Sprint 2 More :
+  [] En tant que gestionnaire, je peux partager les informations de mon site sur les réseaux sociaux
+  [] En tant que gestionnaire, je peux voir (et exploiter) les différentes statistiques 
+
+Todo AFTER :
+  [] En tant que gestionnaire, je peux voir (et exploiter) les commandes
+  [] En tant qu'acheteur, je peux me faire livrer mes achats par un service de livraison
+  [] En tant qu'acheteur, je peux payer mon panier avec ma technique de paiement préférée

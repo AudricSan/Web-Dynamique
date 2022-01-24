@@ -1,5 +1,6 @@
 <?php
-    $root = 'http://127.0.0.230/Eshop%202/';
+    // var_dump($_SERVER);
+    $root = 'http://' . $_SERVER['HTTP_HOST'] . '/Eshop%202/';
     $cssStyle = $root . 'view/css/styles.css';
     $cssForms = $root . 'view/css/forms.css';
     $cssAdmin = $root . 'view/css/admin.css';
