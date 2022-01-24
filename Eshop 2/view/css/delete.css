@@ -1,4 +1,4 @@
-.delete{
+.delete {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     border-radius: 10px;
 }
 
-.delete .row{
+.delete .row {
     display: flex;
     flex-direction: column;
 
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.delete .form-actions{
+.delete .form-actions {
     width: 100%;
     margin-bottom: 2em;
 
@@ -23,11 +23,11 @@
     justify-content: space-between;
 }
 
-.delete .thumbnail{
+.delete .thumbnail {
     margin-right: 0em;
     margin-left: 2em;
 }
 
-.delete .btn{
+.delete .btn {
     margin: 0;
 }

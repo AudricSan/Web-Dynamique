@@ -1,4 +1,4 @@
-.edit{
+.edit {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-.edit .row{
+.edit .row {
     display: flex;
     flex-direction: row;
     margin: 2em;
@@ -17,11 +17,11 @@
     margin-top: 0em;
 }
 
-.edit h1{
+.edit h1 {
     text-align: center;
 }
 
-.edit .form-actions{
+.edit .form-actions {
     width: 100%;
 
     display: flex;
@@ -29,12 +29,12 @@
     justify-content: space-between;
 }
 
-.edit .form-group{
+.edit .form-group {
     display: block;
     margin-bottom: 5px;
 }
 
-.edit .thumbnail{
+.edit .thumbnail {
     margin: 0em;
     margin-left: 2em;
 
@@ -43,11 +43,11 @@
     min-height: 490px;
 }
 
-.edit .btn{
+.edit .btn {
     margin: 0;
 }
 
-.edit .btnedit{
+.edit .btnedit {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,7 +57,7 @@
     margin-left: 2em;
 }
 
-.edit .price{
+.edit .price {
     position: relative;
 
     top: 0em;

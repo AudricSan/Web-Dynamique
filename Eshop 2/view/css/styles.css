@@ -108,15 +108,15 @@ button {
     align-items: flex-start;
 }
 
-.navlog ul{
+.navlog ul {
     padding: 0em;
 }
 
-.navlog a{
+.navlog a {
     color: #fff;
 }
 
-.navlog li{
+.navlog li {
     display: inline-block;
     font-size: 18px;
     text-shadow: 2px 2px #333;
@@ -131,7 +131,7 @@ button {
     text-decoration: none;
 }
 
-.navlog .active a{
+.navlog .active a {
     color: coral;
     text-decoration: none;
 }

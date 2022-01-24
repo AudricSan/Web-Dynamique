@@ -1,57 +1,57 @@
-.user{
+.user {
     background-color: #fff;
     border-radius: 10px;
 }
 
-.user h1{
+.user h1 {
     display: flex;
     justify-content: space-between;
     padding-left: 1em;
     padding-right: 1em;
 }
 
-.user .back{
+.user .back {
     margin-left: 1em;
     margin-right: 1em;
     margin-bottom: 2em;
 }
 
-.user table{
+.user table {
     margin-top: 1em;
     margin-left: 2em;
     margin-right: 2em;
     width: auto;
 }
 
-.user thead{
+.user thead {
     background-color: #8ca1da;
 }
 
-.user tbody{
+.user tbody {
     background-color: lightgray;
 }
 
-.user .row{
+.user .row {
     display: flex;
     flex-direction: column;
 }
 
-.user{
+.user {
     display: flex;
     flex-direction: column;
 }
 
-.user .btn{
+.user .btn {
     margin: 0.2em;
     display: flex;
     flex-direction: row;
 }
 
-.user .btn span{
+.user .btn span {
     margin-right: 0.5em;
 }
 
-.user .back{
+.user .back {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

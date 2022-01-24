@@ -1,6 +1,8 @@
 <?php
     // var_dump($_SERVER);
     $root = 'http://' . $_SERVER['HTTP_HOST'] . '/Eshop%202/';
+    $_SESSION['root'] = $root;
+    // var_dump($root);
     $cssStyle = $root . 'view/css/styles.css';
     $cssForms = $root . 'view/css/forms.css';
     $cssAdmin = $root . 'view/css/admin.css';
@@ -8,6 +10,7 @@
     $cssView = $root . 'view/css/view.css';
     $cssEdit = $root . 'view/css/edit.css';
     $cssDelete = $root . 'view/css/delete.css';
+    $cssFooter = $root . 'view/css/footer.css';
     // $root = urlencode($root);
     // var_dump($root);
     // var_dump($_SERVER);
@@ -34,6 +37,7 @@ echo "
         <link rel='stylesheet' href='$cssView'>
         <link rel='stylesheet' href='$cssEdit'>
         <link rel='stylesheet' href='$cssDelete'>
+        <link rel='stylesheet' href='$cssFooter'>
     </head>
 ";
 

@@ -3,10 +3,10 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding : 1em;
+    padding: 1em;
 }
 
-.form-group{
+.form-group {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@ h2 {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px 10px 10px 10px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-    padding : 2rem;
+    padding: 2rem;
 }
 
 .form-button {
@@ -26,25 +26,25 @@ h2 {
     margin: 2em;
 }
 
-.form-group label{
-    padding : 0;
+.form-group label {
+    padding: 0;
     padding-bottom: 0.2em;
     padding-top: 1em;
 }
 
-.form{
+.form {
     width: fit-content;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.form-group a{
+.form-group a {
     color: #00a2ff;
     margin-right: 1em;
 }
 
-.form .back{
+.form .back {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -52,7 +52,7 @@ h2 {
     margin-top: 2em;
 }
 
-.form .form-button{
+.form .form-button {
     background: none;
     color: #00a2ff;
     margin: 0;
@@ -60,14 +60,14 @@ h2 {
     margin-left: 1em;
 }
 
-.form .btn{
+.form .btn {
     margin: 0;
 }
 
-.back a{
+.back a {
     color: #fff;
 }
 
-.backback{
+.backback {
     color: #00a2ff !important;
 }

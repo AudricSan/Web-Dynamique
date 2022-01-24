@@ -1,0 +1,20 @@
+.footer {
+    background: rgba(0, 0, 0, 0.5);
+    color: #00a2ff;
+    text-align: center;
+    padding: 5em;
+    margin-top: 4em;
+    border-top: 2mm ridge #f2f700;
+    border-bottom: 2mm ridge #f2f700;
+}
+
+.mentions {
+    font-family: 'Holtwood One SC', sans-serif;
+    font-size: 1em;
+    padding: 2em;
+    color: #00a2ff;
+}
+
+.text {
+    font-size: 0.8em;
+}

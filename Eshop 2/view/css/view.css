@@ -1,4 +1,4 @@
-.view{
+.view {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     border-radius: 10px;
 }
 
-.view .row{
+.view .row {
     display: flex;
     flex-direction: row;
 
@@ -14,12 +14,12 @@
     align-items: center;
 }
 
-.view .form-actions{
+.view .form-actions {
     width: 100%;
     margin-bottom: 2em;
 }
 
-.view .thumbnail{
+.view .thumbnail {
     margin-right: 0em;
     margin-left: 2em;
 }

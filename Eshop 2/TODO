@@ -40,13 +40,13 @@ Todo Utilities :
   [+] Bouton déconnexion
 
 Todo Sprint 2 :
-  [ ] En tant que visiteur, je peux afficher le contenu de mon panier d'achats
-  [ ] En tant que visiteur, je peux modifier des produits dans mon panier
-  [ ] En tant que gestionnaire, je peux mettre à jour les produits
+  [] En tant que visiteur, je peux modifier des produits dans mon panier
+  [] En tant que visiteur, je peux afficher le contenu de mon panier d'achats
+  [] En tant que gestionnaire, je peux mettre à jour les produits
   [] En tant que gestionnaire, je peux optimiser le referencement
 
 Todo Sprint 2 More :
-  [] En tant que gestionnaire, je peux partager les informations de mon site sur les réseaux sociaux
+  [+] En tant que gestionnaire, je peux partager les informations de mon site sur les réseaux sociaux
   [] En tant que gestionnaire, je peux voir (et exploiter) les différentes statistiques 
 
 Todo AFTER :
