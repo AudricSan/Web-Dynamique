@@ -11,9 +11,7 @@
     $cssEdit = $root . 'view/css/edit.css';
     $cssDelete = $root . 'view/css/delete.css';
     $cssFooter = $root . 'view/css/footer.css';
-    // $root = urlencode($root);
-    // var_dump($root);
-    // var_dump($_SERVER);
+    $cssMention = $root . 'view/css/mentions.css';
 
     if(!isset($title)){
         $title = "COUCOU";
@@ -38,7 +36,6 @@ echo "
         <link rel='stylesheet' href='$cssEdit'>
         <link rel='stylesheet' href='$cssDelete'>
         <link rel='stylesheet' href='$cssFooter'>
+        <link rel='stylesheet' href='$cssMention'>
     </head>
 ";
-
-?>

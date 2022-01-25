@@ -1,0 +1,13 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+}
+
+p {
+    margin-left: 2em;
+}
+
+b {
+    margin-left: -1em;
+}
