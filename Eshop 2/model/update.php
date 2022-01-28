@@ -170,7 +170,6 @@ require_once('../view/include/header.php');
                 <div class="caption">
                     <h4><?php echo $name; ?></h4>
                     <p><?php echo $description; ?></p>
-                    <a href="#" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a>
                 </div>
             </div>
         </div>

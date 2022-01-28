@@ -68,7 +68,7 @@ require_once('include/header.php');
                                     <div class="caption">
                                         <h4>' . $item['Items_Name'] . '</h4>
                                         <p>' . $item['Items_Description'] . '</p>
-                                        <a href="#" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a>
+                                        <a href="../model/addchart.php?itemsid=' . intval($item['Items_ID']) . '" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a>
                                     </div>
                                 </div>
                             </div>';

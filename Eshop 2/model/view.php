@@ -61,7 +61,6 @@ require_once('../view/include/header.php');
           <div class="caption">
             <h4><?php echo $item['items_Name']; ?></h4>
             <p><?php echo $item['items_Description']; ?></p>
-            <a href="#" class="btn btn-order" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a>
           </div>
         </div>
       </div>
