@@ -1,6 +1,6 @@
 <?php
 session_start();
-var_dump($_SESSION);
+// var_dump($_SESSION);
 
 $title = "Public Register";
 include_once('include/header.php');
@@ -10,13 +10,13 @@ $error = $_SESSION["Error"];
 }else{
   $error="";
 }
-var_dump($error);
+// var_dump($error);
 ?>
 
 <body>
   <h1 class="text-logo"> T-Shop </h1>
   <div class="container form">
-  <h2> Connection</h2>
+  <h2> Inscription </h2>
   <form action="../controller/Public_Register.php" method="post">
       <div class="form-group">
           <label for="pseudo">pseudo</label>

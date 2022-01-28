@@ -41,10 +41,14 @@ Todo Utilities :
 
 Todo Sprint 2 :
   [+] En tant que visiteur, je peux afficher le contenu de mon panier d'achats
+  [+] En tant que visiteur, je peux Suprimer des produits dans mon panier
 
-  [] En tant que visiteur, je peux modifier des produits dans mon panier => ERROR DELETE ITEM FROM CHART
+  [] En tant que visiteur, je peux Ajouter des produits dans mon panier
+  [] Ajouter un bouton 'TOUT supprimer" pour pouvoir supprimer tout le panier 
+
   [] En tant que gestionnaire, je peux mettre à jour les produits
   [] En tant que gestionnaire, je peux optimiser le referencement
+  [] Rajouter un fichier sitemap (fichier ".txt", pour que les bots de Google puissent se repérer)  
 
 Todo Sprint 2 More :
   [+] En tant que gestionnaire, je peux partager les informations de mon site sur les réseaux sociaux
@@ -54,3 +58,4 @@ Todo AFTER :
   [] En tant que gestionnaire, je peux voir (et exploiter) les commandes
   [] En tant qu'acheteur, je peux me faire livrer mes achats par un service de livraison
   [] En tant qu'acheteur, je peux payer mon panier avec ma technique de paiement préférée
+

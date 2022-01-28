@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'database.php';
 // var_dump($_SESSION);
 
 if (!isset($_SESSION['UserConnected'])) {
@@ -10,9 +11,8 @@ if ($_SESSION['UserConnected'] != 1) {
   header("Location: ../view/login.php");
 }
 
-require 'database.php';
 $userId = $_SESSION['UserID'];
-// var_dump($id);
+// var_dump($userId);
 
 $db = Database::connect();
 $statement = $db->prepare('SELECT * FROM user WHERE User_ID = ?');
@@ -29,14 +29,20 @@ include_once('../view/include/header.php');
  
     if(!empty($_GET['id'])) 
     {
-        $itemID = checkInput($_GET['id']);
+        $itemID = $_GET['id'];
+        // var_dump($itemID);
+
     }
 
     if(!empty($_POST)) 
     {
-        $id = checkInput($_POST['id']);
+        $userId = $_SESSION['UserID'];
+        $itemID = $_POST['id'];
+        // var_dump($userId);
+        // var_dump($itemID);
+
         $statement = $db->prepare("DELETE FROM commande WHERE commande_ItemsID = ? AND commande_UserID = ?");
-        $statement->execute($itemID, $userId);
+        $statement->execute(array($itemID, $userId));
         header("Location: ../view/user/chart.php"); 
     }
 

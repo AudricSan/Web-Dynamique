@@ -64,7 +64,6 @@ include_once('../include/header.php');
             echo '</tr>';
           }
 
-
           Database::disconnect();
           ?>
         </tbody>

@@ -29,6 +29,5 @@ class Database
     {
         self::$connection = null;
     }
-
 }
 ?>
