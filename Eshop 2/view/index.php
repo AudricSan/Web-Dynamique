@@ -29,6 +29,7 @@ require_once('include/header.php');
 
                 if(isset($_SESSION['UserConnected'])){
                     echo '<li> <a href="user/index.php" role="button"><span class="glyphicon glyphicon-list-alt"></span> Mon profil</a> </li>';
+                    echo '<li> <a href="user/chart.php" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a> </li>'; 
                   }
 
                 elseif(isset($_SESSION['AdminConnect'])) {
@@ -39,8 +40,6 @@ require_once('include/header.php');
                     echo '<li> <a href="login.php" role="button"><span class="glyphicon glyphicon-off"></span> Login</a> </li>
                           <li> <a href="Public_Register.php" role="button"><span class="glyphicon glyphicon-list-alt"></span> S\'inscrire</a> </li>';
                   }
-
-                echo '<li> <a href="" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a> </li>'; 
                 
                 echo '</ul> </nav> </div>';
 

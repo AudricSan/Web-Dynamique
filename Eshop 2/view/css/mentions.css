@@ -1,13 +1,23 @@
-.container {
+.mentions {
     font-family: Arial, Helvetica, sans-serif;
+    /*font-family: 'Holtwood One SC', sans-serif;*/
     color: white;
 
 }
 
-p {
+.mentions p{
     margin-left: 2em;
+    text-align: left;
+    line-break: normal;
 }
 
-b {
+.mentions b {
     margin-left: -1em;
+    text-align: left;
+    padding-bottom: 1em;
+}
+
+.mentions b::before{
+    content: "\A\A";
+    white-space: pre;
 }

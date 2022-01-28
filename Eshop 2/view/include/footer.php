@@ -1,7 +1,7 @@
 <footer class="footer">
 
 
-<div class="mentions">
+<div class="container">
     <?php
     echo "<p>- T-Shop -</p>
           <a href='$root/view/mention.php' > Mentions Legales </a>
