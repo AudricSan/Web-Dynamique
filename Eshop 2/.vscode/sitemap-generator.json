@@ -5,7 +5,9 @@
     "Root": "./",
     "IncludeExt": [
       ".html",
-      ".php"
+      ".php",
+      ".txt",
+      ".xml"
     ],
     "Exclude": [],
     "TagsToInclude": [
