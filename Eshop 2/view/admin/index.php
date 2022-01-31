@@ -46,7 +46,7 @@
                 echo ' ';
                 echo '<a class="btn btn-primary" href="../../model/update.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-pencil"></span> Edit</a>';
                 echo ' ';
-                echo '<a class="btn btn-danger" href="../../model/delete.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-remove"></span> Delete</a>';
+                echo '<a class="btn btn-danger" href="../../model/delete.php?id=' . $item['Items_ID'] . '"><span class="glyphicon glyphicon-trash"></span> Delete</a>';
                 echo '</td>';
                 echo '</tr>';
               }
@@ -58,7 +58,8 @@
 
         <div class="back">
         <a class="btn btn-primary" href="../index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour Public</a>
-        <a class="btn btn-primary" href="../register.php"><span class="glyphicon glyphicon-arrow-left"></span> Add Administrator</a>
+        <a class="btn btn-primary" href="../register.php"><span class="glyphicon glyphicon-plus"></span> Add Administrator</a>
+        <a class="btn btn-primary" href="statistics.php"><span class="glyphicon glyphicon-stats"></span> statistics </a>
         <a class="btn btn-danger" href="../../controller/Delete Session.php"><span class="glyphicon glyphicon-remove"></span> Deconnection</a>
         </div>
       </div>

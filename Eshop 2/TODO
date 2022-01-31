@@ -18,7 +18,7 @@ Todo Sprint 1:
   [+] Veiller au respect des dernières règles en vigueur : Cookies et RGPD
 
 Todo:
-  [+] Redirection sur la page d'accueil 
+  [+] Redirection sur la page d'accueil
 
 Todo Connection :
   [+] En tant que visiteur, je peux me connecter en indiquant mon email (utilisé comme login) et mon mot de passe S'IDENTIFIER AVANT DE COMMAN... 
@@ -26,36 +26,36 @@ Todo Connection :
   [+] Valider le formulaire
   [+] Vérifier si les données sont dans la DB
   [+] Valider ou refuser la connexion
-  [-] Email de confirmation 
+  [-] Email de confirmation
   [+] Vérifier si les données insérées sont correctes
 
 Todo Use Zone:
   [+] Créer une page personnelle pour les membres 
   [+] En tant que membre, je peux modifier mes informations personnelle
   [+] Modification individuelle pour chaque champ 
-  [+] Valider la modification 
+  [+] Valider la modification
 
 Todo Utilities :
   [+] En tant que membre, je peux me déconnecter pour redevenir visiteur
   [+] Bouton déconnexionn
 
-Todo Sprint 2 :
+Todo User :
   [+] En tant que visiteur, je peux afficher le contenu de mon panier d'achats
   [+] En tant que visiteur, je peux Suprimer des produits dans mon panier
   [+] En tant que visiteur, je peux Ajouter des produits dans mon panier
-  
-  [] Ajouter un bouton 'TOUT supprimer" pour pouvoir supprimer tout le panier 
+  [+] Ajouter un bouton 'TOUT supprimer" pour pouvoir supprimer tout le panier
 
-  [] En tant que gestionnaire, je peux mettre à jour les produits
-  [] En tant que gestionnaire, je peux optimiser le referencement
-  [] Rajouter un fichier sitemap (fichier ".txt", pour que les bots de Google puissent se repérer)  
+Todo Gestionaire :
+  [+] En tant que gestionnaire, je peux mettre à jour les produits
+  [+] En tant que gestionnaire, je peux optimiser le referencement
+  [+] Rajouter un fichier sitemap (fichier ".txt", pour que les bots de Google puissent se repérer)
+
+  [+] En tant que gestionnaire, je peux voir (et exploiter) les commandes ==> (Les commande en cours)
 
 Todo Sprint 2 More :
   [+] En tant que gestionnaire, je peux partager les informations de mon site sur les réseaux sociaux
-  [] En tant que gestionnaire, je peux voir (et exploiter) les différentes statistiques 
+  [] En tant que gestionnaire, je peux voir (et exploiter) les différentes statistiques
 
-Todo AFTER :
-  [] En tant que gestionnaire, je peux voir (et exploiter) les commandes
+Todo AFTER :  
   [] En tant qu'acheteur, je peux me faire livrer mes achats par un service de livraison
   [] En tant qu'acheteur, je peux payer mon panier avec ma technique de paiement préférée
-

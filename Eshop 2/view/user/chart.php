@@ -59,7 +59,7 @@ include_once('../include/header.php');
             echo '<td class=action with=500>';
             echo '<a class="btn btn-default" href="../../model/public_view.php?id=' . $chart['Items_ID'] . '"><span class="glyphicon glyphicon-eye-open"></span> See</a>';
             echo ' ';
-            echo '<a class="btn btn-danger" href="../../model/deletechart.php?id=' . $chart['Items_ID'] . '"><span class="glyphicon glyphicon-remove"></span> Delete</a>';
+            echo '<a class="btn btn-danger" href="../../model/deletechart.php?id=' . $chart['Items_ID'] . '"><span class="glyphicon glyphicon-trash"></span> Delete</a>';
             echo '</td>';
             echo '</tr>';
           }
@@ -70,9 +70,13 @@ include_once('../include/header.php');
       </table>
     </div>
 
+    <div class="deleteall">
+      <a class="btn btn-danger" href="../../controller/DropChart.php"><span class="glyphicon glyphicon-trash"></span> Dellete All Chart</a>
+    </div>
+    
     <div class="back">
       <a class="btn btn-primary" href="../index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour Home</a>
-      <a class="btn btn-primary" href="index.php"><span class="glyphicon glyphicon-arrow-left"></span> Mon profil </a>
+      <a class="btn btn-primary" href="index.php"><span class="glyphicon glyphicon-user"></span> Mon profil </a>
       <a class="btn btn-danger" href="../../controller/Delete Session.php"><span class="glyphicon glyphicon-remove"></span> Deconnection</a>
     </div>
   </div>

@@ -87,7 +87,7 @@ if(($username && $mail && $name && $firstname && $bday && $pass && $pass2 != '')
         }
         $user = $statement->fetch();
         Database::disconnect();
-        $url = 'member/index.php';
+        $url = 'user/index.php';
         goto end;
 }
 

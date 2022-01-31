@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 24 jan. 2022 à 13:45
+-- Généré le : ven. 28 jan. 2022 à 14:55
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `e-shop`
+-- Base de données : `eshop`
 --
 
 -- --------------------------------------------------------
@@ -41,25 +41,6 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 INSERT INTO `admin` (`Admin_ID`, `Admin_Login`, `Admin_Password`) VALUES
 (5, 'TestOne', '$*95#e!f4dGm78S^');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `available`
---
-
-DROP TABLE IF EXISTS `available`;
-CREATE TABLE IF NOT EXISTS `available` (
-  `Available_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Available_Available` tinyint(1) DEFAULT NULL,
-  `Available_SizeID` int(11) DEFAULT NULL,
-  `Available_TshirtID` int(11) NOT NULL,
-  `Available_ColorID` int(11) NOT NULL,
-  PRIMARY KEY (`Available_ID`),
-  KEY `Available_SizeID` (`Available_SizeID`),
-  KEY `Available_TshirtID` (`Available_TshirtID`),
-  KEY `Available_ColorID` (`Available_ColorID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -91,23 +72,10 @@ INSERT INTO `category` (`Category_ID`, `Category_Name`) VALUES
 DROP TABLE IF EXISTS `cities`;
 CREATE TABLE IF NOT EXISTS `cities` (
   `Cities_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Cities_Name` varchar(90) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Cities_Name` varchar(90) DEFAULT NULL,
   `Cities_Code` int(11) DEFAULT NULL,
   PRIMARY KEY (`Cities_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `color`
---
-
-DROP TABLE IF EXISTS `color`;
-CREATE TABLE IF NOT EXISTS `color` (
-  `Color_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Color_Name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`Color_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -119,11 +87,24 @@ DROP TABLE IF EXISTS `commande`;
 CREATE TABLE IF NOT EXISTS `commande` (
   `Commande_ID` int(11) NOT NULL AUTO_INCREMENT,
   `commande_UserID` int(11) NOT NULL,
-  `commande_AvailableID` int(11) NOT NULL,
+  `commande_ItemsID` int(11) NOT NULL,
   PRIMARY KEY (`Commande_ID`),
   KEY `commande_UserID` (`commande_UserID`),
-  KEY `commande_AvailableID` (`commande_AvailableID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `commande_ItemsID` (`commande_ItemsID`)
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `commande`
+--
+
+INSERT INTO `commande` (`Commande_ID`, `commande_UserID`, `commande_ItemsID`) VALUES
+(22, 3, 19),
+(21, 3, 15),
+(20, 3, 3),
+(19, 3, 2),
+(23, 3, 24),
+(24, 3, 36),
+(25, 3, 32);
 
 -- --------------------------------------------------------
 
@@ -193,25 +174,12 @@ INSERT INTO `items` (`Items_ID`, `Items_Name`, `Items_Description`, `Items_Categ
 DROP TABLE IF EXISTS `postadress`;
 CREATE TABLE IF NOT EXISTS `postadress` (
   `PA_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `PA_Cities` int(11) DEFAULT NULL,
+  `PA_Cities` int(11) NOT NULL,
   `PA_Number` int(11) DEFAULT NULL,
-  `PA_Road` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `PA_Road` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`PA_ID`),
   KEY `PA_Cities` (`PA_Cities`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `size`
---
-
-DROP TABLE IF EXISTS `size`;
-CREATE TABLE IF NOT EXISTS `size` (
-  `Size_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Size_Name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`Size_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -238,8 +206,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`User_ID`, `User_Login`, `User_Password`, `User_Name`, `User_FirstName`, `User_Bday`, `User_Mail`, `User_PA_ID`) VALUES
-(2, 'a', 'a', 'a', 'a', '2022-01-12', 'a', 0),
-(3, 'Bili', '$*95#e!f4dGm78S^', 'Eliot', 'bili', '2022-01-19', 'bili@gmail.com', NULL);
+(3, 'Bili', '$*95#e!f4dGm78S^', 'Boomer', 'bili', '2022-01-19', 'bili@gmail.com', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -102,7 +102,7 @@
 
         <div class="back">
         <a class="btn btn-primary" href="../index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour Public</a>
-        <a class="btn btn-primary" href="chart.php"><span class="glyphicon glyphicon-arrow-left"></span> Panier</a>
+        <a class="btn btn-primary" href="chart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a>
         <a class="btn btn-danger" href="../../controller/Delete Session.php"><span class="glyphicon glyphicon-remove"></span> Deconnection</a>
         </div>
       </div>
