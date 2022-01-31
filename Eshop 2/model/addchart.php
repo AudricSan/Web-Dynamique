@@ -34,5 +34,6 @@ if(!empty($_GET['itemsid']))
     $statement = $db->prepare("INSERT INTO commande (commande_UserID, commande_ItemsID) VALUES (?, ?)");
     $statement->execute(array($userId, $itemID));
     header("Location: ../view/user/chart.php"); 
+    // header("Location: ../view/index.php"); 
 }
 ?>

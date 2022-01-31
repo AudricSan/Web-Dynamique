@@ -32,7 +32,7 @@ include_once('../include/header.php');
   <h1 class="text-logo"> T-Shop </h1>
   <div class="container admin">
     <div class="row">
-      <h1><strong>Panier de <?php echo $user['User_Name']; ?> </strong><a href="../index.php" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Ajouter des produits</a></h1>
+      <h1><strong>Panier de <?php echo $user["User_FirstName"];?> <?php echo $user['User_Name'];?></strong><a href="../index.php" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Ajouter des produits</a></h1>
       <table class="table table-striped table-bordered">
         <thead>
           <tr>

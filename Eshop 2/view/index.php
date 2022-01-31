@@ -30,10 +30,12 @@ require_once('include/header.php');
                 if(isset($_SESSION['UserConnected'])){
                     echo '<li> <a href="user/index.php" role="button"><span class="glyphicon glyphicon-list-alt"></span> Mon profil</a> </li>';
                     echo '<li> <a href="user/chart.php" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a> </li>'; 
+                    /*echo '<li class="colorred" > <a href="../controler/Delete Session.php" role="button"><span class="glyphicon glyphicon-log-out"></span> Déconnexion </a> </li>'; */
                   }
 
                 elseif(isset($_SESSION['AdminConnect'])) {
                     echo '<li> <a href="admin/index.php" role="button"><span class="glyphicon glyphicon-list-alt"></span> Gestion Admin</a> </li>';
+                    /*echo '<li> <a href="../controler/Delete Session.php" role="button"><span class="glyphicon glyphicon-log-out"></span> Déconnexion </a> </li>';*/
                   }
 
                 else{

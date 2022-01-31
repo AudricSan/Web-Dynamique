@@ -16,7 +16,44 @@
       <h1 class="text-logo"> T-Shop </h1>
       <div class="container admin">
         <div class="row">
-          <h1><strong> Commande en cours </strong><a href="../../model/insert.php" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Ajouter</a></h1>
+          <h1><strong> Statistics Dashboard </strong><a href="../../model/insert.php" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Ajouter</a></h1>
+         
+          <h2> Statistics </h2>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Count in Commandes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              require '../../model/database.php';
+              $db = Database::connect();
+              $statement = $db->prepare('select Items_ID, Items_Price, Items_Name, Items_Description, count(commande_itemsID) as count from commande inner join items on Items_ID = commande_ItemsID group by Items_ID');
+              $statement->execute();
+              // $item = $statement->fetchAll();
+              // var_dump($item);
+
+              while ($item = $statement->fetchAll()) {
+                foreach($item as $key => $value){
+                    // var_dump($value);
+                    echo '<tr>';
+                    echo '<td>' . $value['Items_Name'] . '</td>';
+                    echo '<td>' . $value['Items_Description'] . '</td>';
+                    echo '<td>' . number_format($value['Items_Price'], 2, '.', '') . '</td>';
+                    echo '<td>' . $value['count'] . '</td>';
+                    echo '</tr>';
+                }
+              }
+              Database::disconnect();
+              ?>
+            </tbody>
+          </table>
+          
+          <h2> User Commandes </h2>
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
@@ -29,8 +66,6 @@
             </thead>
             <tbody>
               <?php
-              require '../../model/database.php';
-              $db = Database::connect();
               $statement = $db->prepare('select * from items inner join commande on commande_ItemsID = Items_ID inner join category on Items_CategoryID = Category_ID INNER JOIN user on user_Id = commande_UserID;');
               $statement->execute();
               //$item = $statement->fetchAll();
