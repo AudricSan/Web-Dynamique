@@ -16,7 +16,7 @@
       <h1 class="text-logo"> T-Shop </h1>
       <div class="container admin">
         <div class="row">
-          <h1><strong> Statistics Dashboard </strong><a href="../../model/insert.php" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Ajouter</a></h1>
+          <h1><strong> Statistics Dashboard </strong></h1>
          
           <h2> Statistics </h2>
           <table class="table table-striped table-bordered">
@@ -32,7 +32,7 @@
               <?php
               require '../../model/database.php';
               $db = Database::connect();
-              $statement = $db->prepare('select Items_ID, Items_Price, Items_Name, Items_Description, count(commande_itemsID) as count from commande inner join items on Items_ID = commande_ItemsID group by Items_ID');
+              $statement = $db->prepare('select Items_ID, Items_Price, Items_Name, Items_Description, count(commande_itemsID) as count from commande inner join items on Items_ID = commande_ItemsID group by Items_ID ORDER BY count DESC');
               $statement->execute();
               // $item = $statement->fetchAll();
               // var_dump($item);
