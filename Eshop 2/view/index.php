@@ -2,6 +2,15 @@
 session_start();
 require_once('include/header.php');
 // var_dump($_SESSION);
+
+// $group = [];
+// $audric = "Audric";
+// $xavier = "Xavier";
+// $ronald = "Ronald";
+// $tibhault = "Tibhault";
+// array_push($group, $audric);
+// var_dump($group);
+
 ?>
 
     <body>

@@ -11,97 +11,12 @@
 		<lastmod>2022-01-31</lastmod>
 	</url>
 	<url>
-		<loc>http://www.t-shop.be/view/user</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-28</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/view/register.php</loc>
+		<loc>http://www.t-shop.be/controller/Delete Session.php</loc>
 		<priority>0.50</priority>
 		<lastmod>2022-01-24</lastmod>
 	</url>
 	<url>
-		<loc>http://www.t-shop.be/view/Public_Register.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-28</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/view/mention.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-26</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/view/login.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-24</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/view/admin</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-28</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/view.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-28</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/userupdate.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-21</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/update.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-28</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/public_view.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-28</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/insert.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-21</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/function.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-12</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/deletechart.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-28</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/delete.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-21</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/Delete Session.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-24</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/database.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-28</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/model/addchart.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-31</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/controller/register.php</loc>
-		<priority>0.50</priority>
-		<lastmod>2022-01-21</lastmod>
-	</url>
-	<url>
-		<loc>http://www.t-shop.be/controller/Public_Register.php</loc>
+		<loc>http://www.t-shop.be/controller/DropChart.php</loc>
 		<priority>0.50</priority>
 		<lastmod>2022-01-28</lastmod>
 	</url>
@@ -111,29 +26,104 @@
 		<lastmod>2022-01-19</lastmod>
 	</url>
 	<url>
-		<loc>http://www.t-shop.be/controller/DropChart.php</loc>
+		<loc>http://www.t-shop.be/controller/Public_Register.php</loc>
 		<priority>0.50</priority>
 		<lastmod>2022-01-28</lastmod>
 	</url>
 	<url>
-		<loc>http://www.t-shop.be/controller/Delete Session.php</loc>
+		<loc>http://www.t-shop.be/controller/register.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-21</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/addchart.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-31</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/database.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-28</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/Delete Session.php</loc>
 		<priority>0.50</priority>
 		<lastmod>2022-01-24</lastmod>
 	</url>
 	<url>
-		<loc>http://www.t-shop.be/view/user/chart.php</loc>
-		<priority>0.25</priority>
-		<lastmod>2022-01-31</lastmod>
+		<loc>http://www.t-shop.be/model/delete.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-21</lastmod>
 	</url>
 	<url>
-		<loc>http://www.t-shop.be/view/include/header.php</loc>
-		<priority>0.25</priority>
+		<loc>http://www.t-shop.be/model/deletechart.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-28</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/function.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-12</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/insert.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-21</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/public_view.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-28</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/update.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-28</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/userupdate.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-21</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/model/view.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-28</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/view/admin</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-28</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/view/login.php</loc>
+		<priority>0.50</priority>
 		<lastmod>2022-01-24</lastmod>
 	</url>
 	<url>
-		<loc>http://www.t-shop.be/view/include/footer.php</loc>
-		<priority>0.25</priority>
+		<loc>http://www.t-shop.be/view/mention.php</loc>
+		<priority>0.50</priority>
 		<lastmod>2022-01-26</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/view/Public_Register.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-31</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/view/register.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-24</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/view/user</loc>
+		<priority>0.50</priority>
+		<lastmod>2022-01-28</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/view/admin/share.php</loc>
+		<priority>0.25</priority>
+		<lastmod>2022-01-24</lastmod>
 	</url>
 	<url>
 		<loc>http://www.t-shop.be/view/admin/statistics.php</loc>
@@ -141,8 +131,18 @@
 		<lastmod>2022-01-31</lastmod>
 	</url>
 	<url>
-		<loc>http://www.t-shop.be/view/admin/share.php</loc>
+		<loc>http://www.t-shop.be/view/include/footer.php</loc>
+		<priority>0.25</priority>
+		<lastmod>2022-01-26</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/view/include/header.php</loc>
 		<priority>0.25</priority>
 		<lastmod>2022-01-24</lastmod>
+	</url>
+	<url>
+		<loc>http://www.t-shop.be/view/user/chart.php</loc>
+		<priority>0.25</priority>
+		<lastmod>2022-01-31</lastmod>
 	</url>
 </urlset>
