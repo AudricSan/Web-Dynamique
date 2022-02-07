@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 28 jan. 2022 à 13:46
--- Version du serveur :  5.7.31
--- Version de PHP : 7.3.21
+-- Généré le : lun. 07 fév. 2022 à 17:24
+-- Version du serveur : 5.7.36
+-- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,14 +33,15 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `Admin_Login` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Admin_Password` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`Admin_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `admin`
 --
 
 INSERT INTO `admin` (`Admin_ID`, `Admin_Login`, `Admin_Password`) VALUES
-(5, 'TestOne', '$*95#e!f4dGm78S^');
+(5, 'TestOne', '$*95#e!f4dGm78S^'),
+(14, 'AudricSan', '26$3&wD4t&%z8&&P');
 
 -- --------------------------------------------------------
 
@@ -72,10 +73,10 @@ INSERT INTO `category` (`Category_ID`, `Category_Name`) VALUES
 DROP TABLE IF EXISTS `cities`;
 CREATE TABLE IF NOT EXISTS `cities` (
   `Cities_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Cities_Name` varchar(90) DEFAULT NULL,
+  `Cities_Name` varchar(90) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Cities_Code` int(11) DEFAULT NULL,
   PRIMARY KEY (`Cities_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -91,16 +92,41 @@ CREATE TABLE IF NOT EXISTS `commande` (
   PRIMARY KEY (`Commande_ID`),
   KEY `commande_UserID` (`commande_UserID`),
   KEY `commande_ItemsID` (`commande_ItemsID`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
 INSERT INTO `commande` (`Commande_ID`, `commande_UserID`, `commande_ItemsID`) VALUES
-(7, 3, 10),
-(6, 3, 1),
-(4, 3, 10);
+(31, 6, 1),
+(32, 6, 10),
+(60, 3, 28),
+(59, 3, 6),
+(58, 3, 5),
+(57, 3, 4),
+(56, 3, 34),
+(33, 6, 11),
+(34, 6, 13),
+(55, 3, 30),
+(54, 3, 24),
+(53, 3, 13),
+(52, 3, 11),
+(51, 3, 10),
+(50, 3, 3),
+(41, 0, 34),
+(42, 5, 2),
+(43, 5, 10),
+(44, 5, 20),
+(45, 5, 16),
+(46, 5, 25),
+(47, 5, 26),
+(48, 5, 28),
+(49, 5, 33),
+(61, 0, 3),
+(62, 0, 2),
+(63, 6, 3),
+(64, 6, 15);
 
 -- --------------------------------------------------------
 
@@ -195,14 +221,48 @@ CREATE TABLE IF NOT EXISTS `user` (
   `User_PA_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`User_ID`),
   KEY `User_PA_ID` (`User_PA_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`User_ID`, `User_Login`, `User_Password`, `User_Name`, `User_FirstName`, `User_Bday`, `User_Mail`, `User_PA_ID`) VALUES
-(3, 'Bili', '$*95#e!f4dGm78S^', 'Boomer', 'bili', '2022-01-19', 'bili@gmail.com', NULL);
+(3, 'Bili', '$*95#e!f4dGm78S^', 'Boomer', 'bili', '2022-01-19', 'bili@gmail.com', NULL),
+(6, 'Xavier', '26$3&wD4t&%z8&&P', 'Xavier', 'Deleclos', '2022-01-14', 'deleclos@gmail.com', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `visite`
+--
+
+DROP TABLE IF EXISTS `visite`;
+CREATE TABLE IF NOT EXISTS `visite` (
+  `visite_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `visite_Date` varchar(35) DEFAULT NULL,
+  `day` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`visite_ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `visite`
+--
+
+INSERT INTO `visite` (`visite_ID`, `visite_Date`, `day`) VALUES
+(34, 'Monday, 07-Feb-2022', 'Monday'),
+(33, 'Monday, 07-Feb-2022', 'Monday'),
+(32, 'Monday, 07-Feb-2022', 'Monday'),
+(31, 'Monday, 07-Feb-2022', 'Monday'),
+(30, 'Monday, 07-Feb-2022', 'Monday'),
+(29, 'Monday, 07-Feb-2022', 'Monday'),
+(28, 'Monday, 07-Feb-2022', 'Monday'),
+(27, 'Monday, 07-Feb-2022', 'Monday'),
+(35, 'Monday, 07-Feb-2022', 'Monday'),
+(36, 'Sunday, 06-Feb-2022', 'Sunday'),
+(37, 'Monday, 07-Feb-2022', 'Monday'),
+(38, 'Monday, 14-Feb-2022', 'Monday'),
+(39, 'Tuesday, 15-Feb-2022', 'Tuesday');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

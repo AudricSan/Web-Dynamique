@@ -10,6 +10,8 @@
 
     $title = "Gestion T-Shop";
     include_once('../include/header.php');
+    require '../../model/database.php';
+
     ?>
 
     <body>
@@ -17,6 +19,41 @@
       <div class="container admin">
         <div class="row">
           <h1><strong> Statistics Dashboard </strong></h1>
+
+          <h2> Most Visit day </h2>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Visit day</th>
+                <th>Visit Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              $db = Database::connect();
+              $statement = $db->prepare('SELECT visite_Date, COUNT(day) as count FROM visite GROUP by day');
+              $statement->execute();
+              while ($item = $statement->fetchAll()) {
+                foreach($item as $key => $value){
+                    $day = $value['visite_Date'];
+
+                    $explode = explode(',', $day);
+                    $day = $explode[0];
+
+                    $date = $explode[1];
+                    $date = explode(' ', $date);
+                    $date = $date[1];
+
+                    echo '<tr>';
+                    echo '<td>' . $day . '</td>';
+                    echo '<td>' . $value['count'] . '</td>';
+                    echo '</tr>';
+                }
+              }
+              Database::disconnect();
+              ?>
+            </tbody>
+          </table>
          
           <h2> Visites </h2>
           <table class="table table-striped table-bordered">
@@ -30,7 +67,6 @@
             </thead>
             <tbody>
               <?php
-              require '../../model/database.php';
               $db = Database::connect();
               $statement = $db->prepare('SELECT visite_Date, COUNT(visite_Date) as count FROM visite GROUP by visite_Date');
               $statement->execute();
@@ -39,7 +75,6 @@
                     // var_dump($value);
                     $day = $value['visite_Date'];
                     // var_dump($day);
-
                     $explode = explode(',', $day);
                     $day = $explode[0];
 
@@ -55,41 +90,6 @@
                     echo '<td>' . $day . '</td>';
                     echo '<td>' . $value['count'] . '</td>';
                     echo '<td>' . $value['visite_Date'] . '</td>';
-                    echo '</tr>';
-                }
-              }
-              Database::disconnect();
-              ?>
-            </tbody>
-          </table>
-          
-          <h2> Most Visit day </h2>
-          <table class="table table-striped table-bordered">
-            <thead>
-              <tr>
-                <th>Visit day</th>
-                <th>Visit Number</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-              $db = Database::connect();
-              $statement = $db->prepare('SELECT visite_Date, COUNT(day) as count FROM visite GROUP by visite_Date');
-              $statement->execute();
-              while ($item = $statement->fetchAll()) {
-                foreach($item as $key => $value){
-                    $day = $value['visite_Date'];
-
-                    $explode = explode(',', $day);
-                    $day = $explode[0];
-
-                    $date = $explode[1];
-                    $date = explode(' ', $date);
-                    $date = $date[1];
-
-                    echo '<tr>';
-                    echo '<td>' . $day . '</td>';
-                    echo '<td>' . $value['count'] . '</td>';
                     echo '</tr>';
                 }
               }

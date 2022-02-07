@@ -15,7 +15,7 @@
     $joke = $root . 'view/css/joke.css';
 
     if(!isset($title)){
-        $title = "COUCOU";
+        $title = "Tshop";
     }
 
 echo "

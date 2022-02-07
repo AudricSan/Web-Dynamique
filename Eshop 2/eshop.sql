@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 07 fév. 2022 à 14:54
+-- Généré le : lun. 07 fév. 2022 à 17:30
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -73,10 +73,10 @@ INSERT INTO `category` (`Category_ID`, `Category_Name`) VALUES
 DROP TABLE IF EXISTS `cities`;
 CREATE TABLE IF NOT EXISTS `cities` (
   `Cities_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Cities_Name` varchar(90) DEFAULT NULL,
+  `Cities_Name` varchar(90) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Cities_Code` int(11) DEFAULT NULL,
   PRIMARY KEY (`Cities_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -243,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `visite` (
   `visite_Date` varchar(35) DEFAULT NULL,
   `day` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`visite_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `visite`
@@ -259,7 +259,11 @@ INSERT INTO `visite` (`visite_ID`, `visite_Date`, `day`) VALUES
 (28, 'Monday, 07-Feb-2022', 'Monday'),
 (27, 'Monday, 07-Feb-2022', 'Monday'),
 (35, 'Monday, 07-Feb-2022', 'Monday'),
-(36, 'Sunday, 06-Feb-2022', 'Sunday');
+(36, 'Sunday, 06-Feb-2022', 'Sunday'),
+(37, 'Monday, 07-Feb-2022', 'Monday'),
+(38, 'Monday, 14-Feb-2022', 'Monday'),
+(39, 'Tuesday, 15-Feb-2022', 'Tuesday'),
+(40, 'Monday, 07-Feb-2022', 'Monday');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

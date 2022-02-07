@@ -56,8 +56,8 @@ Todo Sprint 3 :
   [+] En tant que gestionnaire, je peux voir (et exploiter) les différentes statistiques
 
   [+] Nbr des visites par jour
-  [] Jour avec le plus des visites
-  [] Produit le plus vendu 
+  [+] Jour avec le plus des visites
+  [+] Produit le plus vendu 
 
   [] Consulter la doc sur comment attaquer les réseaux sociaux à partir d'un site web"
   [] Prévoir dans la page admin, un espace qui permet de partager"
