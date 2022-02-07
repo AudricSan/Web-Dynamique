@@ -12,6 +12,7 @@
     $cssDelete = $root . 'view/css/delete.css';
     $cssFooter = $root . 'view/css/footer.css';
     $cssMention = $root . 'view/css/mentions.css';
+    $joke = $root . 'view/css/joke.css';
 
     if(!isset($title)){
         $title = "COUCOU";
@@ -37,5 +38,6 @@ echo "
         <link rel='stylesheet' href='$cssDelete'>
         <link rel='stylesheet' href='$cssFooter'>
         <link rel='stylesheet' href='$cssMention'>
+        <link rel='stylesheet' href='$joke'>
     </head>
 ";

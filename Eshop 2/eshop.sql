@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 28 jan. 2022 à 14:55
+-- Généré le : ven. 04 fév. 2022 à 14:00
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -91,20 +91,41 @@ CREATE TABLE IF NOT EXISTS `commande` (
   PRIMARY KEY (`Commande_ID`),
   KEY `commande_UserID` (`commande_UserID`),
   KEY `commande_ItemsID` (`commande_ItemsID`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
 INSERT INTO `commande` (`Commande_ID`, `commande_UserID`, `commande_ItemsID`) VALUES
-(22, 3, 19),
-(21, 3, 15),
-(20, 3, 3),
-(19, 3, 2),
-(23, 3, 24),
-(24, 3, 36),
-(25, 3, 32);
+(31, 6, 1),
+(32, 6, 10),
+(60, 3, 28),
+(59, 3, 6),
+(58, 3, 5),
+(57, 3, 4),
+(56, 3, 34),
+(33, 6, 11),
+(34, 6, 13),
+(55, 3, 30),
+(54, 3, 24),
+(53, 3, 13),
+(52, 3, 11),
+(51, 3, 10),
+(50, 3, 3),
+(41, 0, 34),
+(42, 5, 2),
+(43, 5, 10),
+(44, 5, 20),
+(45, 5, 16),
+(46, 5, 25),
+(47, 5, 26),
+(48, 5, 28),
+(49, 5, 33),
+(61, 0, 3),
+(62, 0, 2),
+(63, 6, 3),
+(64, 6, 15);
 
 -- --------------------------------------------------------
 
@@ -199,14 +220,16 @@ CREATE TABLE IF NOT EXISTS `user` (
   `User_PA_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`User_ID`),
   KEY `User_PA_ID` (`User_PA_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`User_ID`, `User_Login`, `User_Password`, `User_Name`, `User_FirstName`, `User_Bday`, `User_Mail`, `User_PA_ID`) VALUES
-(3, 'Bili', '$*95#e!f4dGm78S^', 'Boomer', 'bili', '2022-01-19', 'bili@gmail.com', NULL);
+(3, 'Bili', '$*95#e!f4dGm78S^', 'Boomer', 'bili', '2022-01-19', 'bili@gmail.com', NULL),
+(5, 'AudricSan', '26$3&wD4t&%z8&&P', 'Audric', 'Rosier', '2022-01-14', 'audricrosier@gmail.com', NULL),
+(6, 'Xavier', '26$3&wD4t&%z8&&P', 'Xavier', 'Deleclos', '2022-01-14', 'deleclos@gmail.com', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

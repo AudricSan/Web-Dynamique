@@ -56,7 +56,7 @@ require_once('../view/include/header.php');
       </div>
       <div class="col-sm-6 site">
         <div class="thumbnail">
-          <img src="<?php echo '../view/images/' . $item['items_IMG']; ?>" alt="...">
+          <img src="<?php echo '../view/images/' . $item['items_IMG']; ?>" alt=" <?php echo $item['items_Description']; ?> ">
           <div class="price"><?php echo number_format((float)$item['items_Price'], 2, '.', '') . ' €'; ?></div>
           <div class="caption">
             <h4><?php echo $item['items_Name']; ?></h4>

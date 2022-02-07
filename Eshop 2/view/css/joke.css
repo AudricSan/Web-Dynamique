@@ -1,0 +1,23 @@
+
+.joke{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.joke code{
+    border-radius: 0;
+}
+
+.joke code:first-of-type{
+    border-radius: 5px 5px 0px 0px;
+    color: black;
+}
+.joke code:last-of-type{
+    border-radius: 0px 0px 5px 5px;
+    color: black;
+}
+
+.joke{
+    display: none;
+}

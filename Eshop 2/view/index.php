@@ -3,19 +3,29 @@ session_start();
 require_once('include/header.php');
 // var_dump($_SESSION);
 
-// $group = [];
-// $audric = "Audric";
-// $xavier = "Xavier";
-// $ronald = "Ronald";
-// $tibhault = "Tibhault";
-// array_push($group, $audric);
-// var_dump($group);
+$group = [];
+$audric = "Audric";
+$xavier = "Xavier";
+$ronald = "Ronald";
+$tibhault = "Tibhault";
+array_push($group, $audric);
 
 ?>
 
     <body>
         <div class="container site">
             <h1 class="text-logo">T-Shop </h1>
+            <p class="joke"><?php 
+                echo '<code> This is a Joke ! GG to find me. </code>
+                      <code> $group = [];                    </code>
+                      <code> $audric = "Audric";             </code>
+                      <code> $xavier = "Xavier";             </code>
+                      <code> $ronald = "Ronald";             </code>
+                      <code> $tibhault = "Tibhault";         </code>
+                      <code> array_push($group, $audric);    </code>
+                      <code> print_r($group);                </code>' ?>
+                      <code> ==> <?php print_r($group);  ?>   </code>
+            </p>
             <?php
 				require '../model/database.php';
 			 
