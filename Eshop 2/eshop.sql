@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 04 fév. 2022 à 14:00
--- Version du serveur :  5.7.31
--- Version de PHP : 7.3.21
+-- Généré le : lun. 07 fév. 2022 à 14:54
+-- Version du serveur : 5.7.36
+-- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,14 +33,15 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `Admin_Login` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Admin_Password` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`Admin_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `admin`
 --
 
 INSERT INTO `admin` (`Admin_ID`, `Admin_Login`, `Admin_Password`) VALUES
-(5, 'TestOne', '$*95#e!f4dGm78S^');
+(5, 'TestOne', '$*95#e!f4dGm78S^'),
+(14, 'AudricSan', '26$3&wD4t&%z8&&P');
 
 -- --------------------------------------------------------
 
@@ -228,8 +229,37 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`User_ID`, `User_Login`, `User_Password`, `User_Name`, `User_FirstName`, `User_Bday`, `User_Mail`, `User_PA_ID`) VALUES
 (3, 'Bili', '$*95#e!f4dGm78S^', 'Boomer', 'bili', '2022-01-19', 'bili@gmail.com', NULL),
-(5, 'AudricSan', '26$3&wD4t&%z8&&P', 'Audric', 'Rosier', '2022-01-14', 'audricrosier@gmail.com', NULL),
 (6, 'Xavier', '26$3&wD4t&%z8&&P', 'Xavier', 'Deleclos', '2022-01-14', 'deleclos@gmail.com', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `visite`
+--
+
+DROP TABLE IF EXISTS `visite`;
+CREATE TABLE IF NOT EXISTS `visite` (
+  `visite_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `visite_Date` varchar(35) DEFAULT NULL,
+  `day` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`visite_ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `visite`
+--
+
+INSERT INTO `visite` (`visite_ID`, `visite_Date`, `day`) VALUES
+(34, 'Monday, 07-Feb-2022', 'Monday'),
+(33, 'Monday, 07-Feb-2022', 'Monday'),
+(32, 'Monday, 07-Feb-2022', 'Monday'),
+(31, 'Monday, 07-Feb-2022', 'Monday'),
+(30, 'Monday, 07-Feb-2022', 'Monday'),
+(29, 'Monday, 07-Feb-2022', 'Monday'),
+(28, 'Monday, 07-Feb-2022', 'Monday'),
+(27, 'Monday, 07-Feb-2022', 'Monday'),
+(35, 'Monday, 07-Feb-2022', 'Monday'),
+(36, 'Sunday, 06-Feb-2022', 'Sunday');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

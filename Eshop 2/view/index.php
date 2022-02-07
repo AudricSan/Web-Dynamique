@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once('include/header.php');
+require '../model/database.php';
+
 // var_dump($_SESSION);
 
 $group = [];
@@ -10,6 +12,29 @@ $ronald = "Ronald";
 $tibhault = "Tibhault";
 array_push($group, $audric);
 
+$db = Database::connect();
+
+$timestamp = date('l, d-M-Y');
+$explode = explode(',', $timestamp);
+$day = $explode[0];
+
+if(isset($_SESSION['AdminConnect'])){
+    if($_SESSION['AdminConnect'] != 1){
+        goto nostat;
+    }
+}
+
+if(isset($_SESSION['UserConnected'])){
+    if($_SESSION['UserConnected'] != 1){
+        goto nostat;
+    }
+};
+
+$statement = $db->prepare("INSERT INTO visite (visite_Date, day) value (?, ?)");
+$statement->execute(array($timestamp, $day));
+Database::disconnect();
+
+nostat:
 ?>
 
     <body>
@@ -26,9 +51,7 @@ array_push($group, $audric);
                       <code> print_r($group);                </code>' ?>
                       <code> ==> <?php print_r($group);  ?>   </code>
             </p>
-            <?php
-				require '../model/database.php';
-			 
+            <?php			 
                 echo '<div class="navlog divNav"> <nav> <ul>';
 
                 $db = Database::connect();

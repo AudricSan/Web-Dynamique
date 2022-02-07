@@ -86,5 +86,5 @@ if(($_POST['pseudo'] && $_POST['pass'] && $_POST['pass2'] != '')){
     $_SESSION['Error'] = "NO DATA";
 
     end:
-    header("location: ../model/$url");
+    header("location: ../view/$url");
 ?>

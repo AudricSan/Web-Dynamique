@@ -1,6 +1,6 @@
 <?php
     // var_dump($_SERVER);
-    $root = 'http://' . $_SERVER['HTTP_HOST'] . '/Eshop%202/';
+    $root = 'http://' . $_SERVER['HTTP_HOST'] . '/';
     $_SESSION['root'] = $root;
     // var_dump($root);
     $cssStyle = $root . 'view/css/styles.css';
